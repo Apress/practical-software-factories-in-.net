@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0F5B8C15-ACC0-41EE-86A6-2CE767744C32}</ProjectGuid>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <OutputName>SoftwareFactorySchemaDSL</OutputName>
+    <LocalizedStringFile>Strings.wxl</LocalizedStringFile>
+    <SuppressAssemblies>True</SuppressAssemblies>
+    <VerboseOutput>True</VerboseOutput>
+    <SetupIniFile>settings.ini</SetupIniFile>
+    <OutputType>Library</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <AssemblyName>Setup</AssemblyName>
+    <RootNamespace>Setup</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>Configuration=Debug</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>Configuration=Release</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\DSLTools\v2.0\wix.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <None Include="Files\EULA.rtf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Files.dslddt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Files.wsx</LastGenOutput>
+    </None>
+    <Compile Include="Files.wsx">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Files.dslddt</DependentUpon>
+    </Compile>
+    <None Include="Files\buildzips.bat" />
+    <None Include="Files\Readme.htm" />
+    <None Include="Files\SoftwareFactorySchemaProjectTemplate\Properties\AssemblyInfo.cs" />
+    <None Include="Files\SoftwareFactorySchemaProjectTemplate\Properties\Resources.Designer.cs" />
+    <None Include="Files\SoftwareFactorySchemaProjectTemplate\Properties\Settings.Designer.cs" />
+    <Compile Include="Registry.wsx">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Registry.dslddt</DependentUpon>
+    </Compile>
+    <None Include="Files\SoftwareFactorySchemaItemTemplate.zip" />
+    <None Include="Files\SoftwareFactorySchemaItemTemplate\SoftwareFactorySchema.sfschema" />
+    <None Include="Files\SoftwareFactorySchemaItemTemplate\SoftwareFactorySchemaBrowser.t4" />
+    <None Include="Files\SoftwareFactorySchemaProjectTemplate.zip" />
+    <None Include="Files\SoftwareFactorySchemaProjectTemplate\Properties\Settings.settings" />
+    <None Include="Files\SoftwareFactorySchemaProjectTemplate\SoftwareFactorySchema.sfschema" />
+    <None Include="Files\SoftwareFactorySchemaProjectTemplate\SoftwareFactorySchemaBrowser.t4" />
+    <None Include="InstallerDefinition.dslsetup" />
+    <None Include="Resources\BannerBitmap.bmp" />
+    <None Include="Resources\Product.ico" />
+    <None Include="Resources\NewFldrBtn.bmp" />
+    <None Include="Resources\ReadmeShortcut.ico" />
+    <None Include="Resources\UpFldrBtn.bmp" />
+    <None Include="Registry.dslddt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Registry.wsx</LastGenOutput>
+    </None>
+    <SetupFiles Include="settings.ini" />
+    <None Include="Main.dslddt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Main.wsx</LastGenOutput>
+    </None>
+    <Compile Include="Main.wsx">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Main.dslddt</DependentUpon>
+    </Compile>
+    <None Include="Strings.wxl" />
+    <None Include="UI.dslddt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UI.wsx</LastGenOutput>
+    </None>
+    <Compile Include="UI.wsx">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UI.dslddt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Files\Activity.jpg" />
+    <None Include="Files\ActivityAndMapping.png" />
+    <None Include="Files\Artifacts.jpg" />
+    <None Include="Files\ISpySoft.png" />
+    <None Include="Files\NewProject.JPG" />
+    <None Include="Files\SoftwareFactorySchemaItemTemplate\SoftwareFactorySchemaBrowser.xml" />
+    <None Include="Files\SoftwareFactorySchemaItemTemplate\SoftwareFactorySchemaBrowser.xsl" />
+    <None Include="Files\SoftwareFactorySchemaItemTemplate\SoftwareFactorySchemaItemTemplate.vstemplate" />
+    <None Include="Files\SoftwareFactorySchemaItemTemplate\__TemplateIcon.ico" />
+    <None Include="Files\SoftwareFactorySchemaProjectTemplate\SoftwareFactorySchema.csproj" />
+    <None Include="Files\SoftwareFactorySchemaProjectTemplate\SoftwareFactorySchemaBrowser.xml" />
+    <None Include="Files\SoftwareFactorySchemaProjectTemplate\SoftwareFactorySchemaBrowser.xsl" />
+    <None Include="Files\SoftwareFactorySchemaProjectTemplate\SoftwareFactorySchemaProjectTemplate.vstemplate" />
+    <None Include="Files\SoftwareFactorySchemaProjectTemplate\style.css" />
+    <None Include="Files\SoftwareFactorySchemaProjectTemplate\__TemplateIcon.ico" />
+    <None Include="Files\NewSchema.png" />
+    <None Include="Files\Toolbox.jpg" />
+    <None Include="Files\Viewpoint.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Files\SoftwareFactorySchemaProjectTemplate\Properties\Resources.resx">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Files\SFBrowser.png" />
+    <None Include="Files\SFBrowser2.png" />
+  </ItemGroup>
+</Project>

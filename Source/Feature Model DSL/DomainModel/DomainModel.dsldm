@@ -1,0 +1,346 @@
+<?xml version="1.0"?>
+<dmd xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dmd">
+  <model name="FeatureModelLanguage" identity="80ae475f-4729-4af9-b1b9-e22c0653e6f4" id="i80ae475fz4729z4af9zb1b9ze22c0653e6f4" namespace="ISpySoft.FeatureModelLanguage.DomainModel" isLoaded="true">
+    <mdfmetadata xsi:type="modelmdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" majorversion="1" minorversion="0" alwaysgeneratecollection="false">
+      <copyright />
+      <stringtable resxfile="DomainModel.Resource.resx" resourcesfile="ISpySoft.FeatureModelLanguage.DomainModel.DomainModel.Resource" usefullyqualifiedname="false" />
+      <copyclosure name="ActivityCopyClosure" doccomment="Copy closure visitor filter" />
+      <removeclosure name="ActivityRemoveClosure" doccomment="Remove closure visitor filter" />
+    </mdfmetadata>
+    <extended>
+      <model>i2b131234z7959z458dz834fz2dc0769ce683</model>
+    </extended>
+    <enumerations>
+      <enumeration name="ActivitySort" identity="1d43b40b-0460-42a8-ae64-1efb417cfdf3" namespace="ISpySoft.FeatureModelLanguage.DomainModel" id="i1d43b40bz0460z42a8zae64z1efb417cfdf3">
+        <literals>
+          <enumerationLiteral name="Regular" identity="c27c639e-9ef0-4dd4-bd9b-6a610994b94f" value="0" />
+          <enumerationLiteral name="SuperActivity" identity="4e1c930d-af5d-49dc-93d1-fcc9db429c78" value="1" />
+        </literals>
+      </enumeration>
+      <enumeration name="FeatureKind" identity="66b66683-91f8-4673-bc72-3fc612c23de6" namespace="ISpySoft.FeatureModelLanguage.DomainModel" id="i66b66683z91f8z4673zbc72z3fc612c23de6">
+        <literals>
+          <enumerationLiteral name="Mandatory" identity="c46b4a86-97ff-4551-987f-0ea5329e2a73" value="0" />
+          <enumerationLiteral name="Optional" identity="5e6b0191-3dca-4110-ae24-5fe1dd8a419a" value="1" />
+          <enumerationLiteral name="FeatureSetFeature" identity="61946660-f19f-4297-a9d4-d2ed577e13d5" value="2" />
+        </literals>
+      </enumeration>
+    </enumerations>
+    <relationships>
+      <relationship name="ActivityGraphHasElements" identity="d1c7ff3a-4bba-40ab-a896-b9dabe5dfa91" namespace="ISpySoft.FeatureModelLanguage.DomainModel" id="id1c7ff3az4bbaz40abza896zb9dabe5dfa91" isLoaded="true" isAbstract="false">
+        <mdfmetadata xsi:type="mdfclassmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" />
+        <roles>
+          <role name="Elements" identity="7305fa3f-8aa3-43e5-be13-1e8cc9ef06f2" id="i7305fa3fz8aa3z43e5zbe13z1e8cc9ef06f2" min="0" max="0" isUnbounded="true" accepts="all">
+            <mdfmetadata xsi:type="rolemdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" isordered="true" isnavigablefrom="false" />
+            <source>ic4464c49za8faz4fb0zbc25zbb0ba770b788</source>
+            <type>i80f728cczdd2dz4d9fza557z0af2f737917a</type>
+            <generatedProperty name="Elements" identity="4a7067ae-c660-4466-9a92-8362716157b1">
+              <referenceType>i80f728cczdd2dz4d9fza557z0af2f737917a</referenceType>
+            </generatedProperty>
+          </role>
+          <role name="FeatureModel" identity="3f9c004e-10d7-4307-b7e8-59b18a295285" id="i3f9c004ez10d7z4307zb7e8z59b18a295285" min="1" max="1" isUnbounded="false" accepts="none">
+            <mdfmetadata xsi:type="rolemdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" isordered="true" isnavigablefrom="false" />
+            <source>i80f728cczdd2dz4d9fza557z0af2f737917a</source>
+            <type>ic4464c49za8faz4fb0zbc25zbb0ba770b788</type>
+            <generatedProperty name="FeatureModel" identity="0bd68cb1-431a-45c0-8866-2261e9778f98">
+              <referenceType>ic4464c49za8faz4fb0zbc25zbb0ba770b788</referenceType>
+            </generatedProperty>
+          </role>
+        </roles>
+      </relationship>
+      <relationship name="RelationshipFeature" identity="e050dd63-bf41-432e-a2c5-43e476179017" namespace="ISpySoft.FeatureModelLanguage.DomainModel" id="ie050dd63zbf41z432eza2c5z43e476179017" isLoaded="true" isAbstract="false">
+        <mdfmetadata xsi:type="mdfclassmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" />
+        <valueProperties>
+          <property name="Guard" identity="85fc32f4-ffe0-47b6-b9b7-494d260c4b36" id="i85fc32f4zffe0z47b6zb9b7z494d260c4b36">
+            <mdfmetadata xsi:type="propertymdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" xpathexpression="" reversexpathexpression="" realattributename="" proxyattributename="" customstorage="false" allownulls="false" readwritestate="readwrite" tag="" />
+            <propertyInfo xsi:type="StringPropertyInfo" name="" identity="00000000-0000-0000-0000-000000000000" default="" max="2147483647" />
+          </property>
+        </valueProperties>
+        <roles>
+          <role name="TransitionTo" identity="d3cd75f5-927d-4418-9cb3-44186b68c94f" id="id3cd75f5z927dz4418z9cb3z44186b68c94f" min="0" max="0" isUnbounded="true" accepts="none">
+            <mdfmetadata xsi:type="rolemdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" isordered="true" isnavigablefrom="false" />
+            <source>i80f728cczdd2dz4d9fza557z0af2f737917a</source>
+            <type>i80f728cczdd2dz4d9fza557z0af2f737917a</type>
+            <generatedProperty name="TransitionTo" identity="819e102c-a1e6-499e-b648-d85840a7d005">
+              <referenceType>i80f728cczdd2dz4d9fza557z0af2f737917a</referenceType>
+            </generatedProperty>
+          </role>
+          <role name="TransitionFrom" identity="a6fb5fc4-9bed-41f5-bd52-1d896a401f8c" id="ia6fb5fc4z9bedz41f5zbd52z1d896a401f8c" min="0" max="0" isUnbounded="true" accepts="none">
+            <mdfmetadata xsi:type="rolemdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" isordered="true" isnavigablefrom="false" />
+            <source>i80f728cczdd2dz4d9fza557z0af2f737917a</source>
+            <type>i80f728cczdd2dz4d9fza557z0af2f737917a</type>
+            <generatedProperty name="TransitionFrom" identity="2b5af7ba-36ce-4e74-8e4a-e7ce9069b51c">
+              <referenceType>i80f728cczdd2dz4d9fza557z0af2f737917a</referenceType>
+            </generatedProperty>
+          </role>
+        </roles>
+      </relationship>
+      <relationship name="RelationshipFeatureSet" identity="abe207c7-e14a-4570-b04b-c97edca7f609" namespace="ISpySoft.FeatureModelLanguage.DomainModel" id="iabe207c7ze14az4570zb04bzc97edca7f609" isLoaded="true" isAbstract="false">
+        <mdfmetadata xsi:type="mdfclassmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" />
+        <valueProperties>
+          <property name="Guard" identity="ff902ae8-2088-426e-bc2f-bdbd6327a908" id="iff902ae8z2088z426ezbc2fzbdbd6327a908">
+            <mdfmetadata xsi:type="propertymdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" xpathexpression="" reversexpathexpression="" realattributename="" proxyattributename="" customstorage="false" allownulls="false" readwritestate="readwrite" tag="" />
+            <propertyInfo xsi:type="StringPropertyInfo" name="" identity="d2406f7f-b705-4450-b560-3702c1e52c85" default="" max="2147483647" />
+          </property>
+          <property name="Event" identity="aae25b9e-e47b-4aec-bac8-b13f103467ba" id="iaae25b9eze47bz4aeczbac8zb13f103467ba">
+            <mdfmetadata xsi:type="propertymdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" xpathexpression="" reversexpathexpression="" realattributename="" proxyattributename="" customstorage="false" allownulls="false" readwritestate="readwrite" tag="" />
+            <propertyInfo xsi:type="StringPropertyInfo" name="" identity="19d97ba4-b07c-4148-8ab4-959e26e30f42" default="" max="2147483647" />
+          </property>
+        </valueProperties>
+        <roles>
+          <role name="ObjectTransitionFrom" identity="745b0795-4332-46ad-badf-60a9e583eb1a" id="i745b0795z4332z46adzbadfz60a9e583eb1a" min="0" max="0" isUnbounded="true" accepts="none">
+            <mdfmetadata xsi:type="rolemdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" isordered="true" isnavigablefrom="false" />
+            <source>i80f728cczdd2dz4d9fza557z0af2f737917a</source>
+            <type>i80f728cczdd2dz4d9fza557z0af2f737917a</type>
+            <generatedProperty name="ObjectTransitionFrom" identity="dfc8eb94-f641-4be7-b776-6a543b173084">
+              <referenceType>i80f728cczdd2dz4d9fza557z0af2f737917a</referenceType>
+            </generatedProperty>
+          </role>
+          <role name="ObjectTransitionTo" identity="59333095-e3fb-448d-9194-94e6e29da1fc" id="i59333095ze3fbz448dz9194z94e6e29da1fc" min="0" max="0" isUnbounded="true" accepts="none">
+            <mdfmetadata xsi:type="rolemdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" isordered="true" isnavigablefrom="false" />
+            <source>i80f728cczdd2dz4d9fza557z0af2f737917a</source>
+            <type>i80f728cczdd2dz4d9fza557z0af2f737917a</type>
+            <generatedProperty name="ObjectTransitionTo" identity="fabc8075-34a4-4771-ad15-5bfdf65d2486">
+              <referenceType>i80f728cczdd2dz4d9fza557z0af2f737917a</referenceType>
+            </generatedProperty>
+          </role>
+        </roles>
+      </relationship>
+    </relationships>
+    <trees>
+      <treenavigator name="intrinsic" identity="a88dd312-1251-4ae9-aaee-f39b03b55371" id="ia88dd312z1251z4ae9zaaeezf39b03b55371">
+        <expressions>
+          <treeExpression xsi:type="RoleExpression" name="ArchitectureHasComponents.Components" identity="78405795-51ce-4356-8f56-c30da85e8270" id="i78405795z51cez4356z8f56zc30da85e8270" definitionlevel="none" containmentstyle="embedding">
+            <source />
+            <role>i7305fa3fz8aa3z43e5zbe13z1e8cc9ef06f2</role>
+          </treeExpression>
+          <treeExpression xsi:type="RoleExpression" name="ComponentIsDependentOn.DependentOn" identity="62c04564-e87e-49d0-a796-69bbb7536344" id="i62c04564ze87ez49d0za796z69bbb7536344" definitionlevel="none" containmentstyle="reference">
+            <source />
+            <role>id3cd75f5z927dz4418z9cb3z44186b68c94f</role>
+          </treeExpression>
+          <treeExpression xsi:type="InheritanceExpression" name="Class1-ActivityElement" identity="6057dd9a-1eec-48d3-822c-94edbf18bcbb" id="i6057dd9az1eecz48d3z822cz94edbf18bcbb" definitionlevel="none">
+            <source />
+            <superType>i80f728cczdd2dz4d9fza557z0af2f737917a</superType>
+            <subType>i0f632824z2b5bz4747za24cz8b978c616b94</subType>
+          </treeExpression>
+          <treeExpression xsi:type="InheritanceExpression" name="SyncBar-ActivityElement" identity="57f8f427-67f3-4b06-8b0b-9c4542c5c807" id="i57f8f427z67f3z4b06z8b0bz9c4542c5c807" definitionlevel="none">
+            <source />
+            <superType>i80f728cczdd2dz4d9fza557z0af2f737917a</superType>
+            <subType>i55176203ze535z445ez8e30z7c43314bdc6e</subType>
+          </treeExpression>
+          <treeExpression xsi:type="InheritanceExpression" name="Class1-ActivityElement" identity="86c39e96-a1f5-4668-909e-329014559d7f" id="i86c39e96za1f5z4668z909ez329014559d7f" definitionlevel="none">
+            <source />
+            <superType>i80f728cczdd2dz4d9fza557z0af2f737917a</superType>
+            <subType>i3591c484zba80z43bdza8bbz92559a307779</subType>
+          </treeExpression>
+          <treeExpression xsi:type="RoleExpression" name="ActivityElementHasActivityElement.ActivityElement" identity="87b77b32-8a01-4116-9e06-b280c9801331" id="i87b77b32z8a01z4116z9e06zb280c9801331" definitionlevel="none" containmentstyle="reference">
+            <source />
+            <role>i745b0795z4332z46adzbadfz60a9e583eb1a</role>
+          </treeExpression>
+        </expressions>
+        <roots />
+      </treenavigator>
+      <treenavigator xsi:type="ShadowTreeNavigator" name="completeDiagram" identity="ae4339e7-f1ed-41cd-958b-4afbd7718da3" id="iae4339e7zf1edz41cdz958bz4afbd7718da3">
+        <expressions>
+          <treeExpression xsi:type="RoleExpression" name="ArchitectureHasComponents.Components" identity="8fec5e37-395a-4560-989b-dd1429e14c21" id="i8fec5e37z395az4560z989bzdd1429e14c21" definitionlevel="definition" containmentstyle="fromsource">
+            <source>i78405795z51cez4356z8f56zc30da85e8270</source>
+            <role>i7305fa3fz8aa3z43e5zbe13z1e8cc9ef06f2</role>
+          </treeExpression>
+          <treeExpression xsi:type="RoleExpression" name="ComponentIsDependentOn.DependentOn" identity="0f216ea0-d0f7-4c48-8a17-7ea104ceb5f0" id="i0f216ea0zd0f7z4c48z8a17z7ea104ceb5f0" definitionlevel="use" containmentstyle="fromsource">
+            <source>i62c04564ze87ez49d0za796z69bbb7536344</source>
+            <role>id3cd75f5z927dz4418z9cb3z44186b68c94f</role>
+          </treeExpression>
+          <treeExpression xsi:type="ValuePropertyExpression" name="StringProperty" identity="3883393a-6744-4328-be23-d40529792327" id="i3883393az6744z4328zbe23zd40529792327">
+            <source />
+            <property>i85fc32f4zffe0z47b6zb9b7z494d260c4b36</property>
+          </treeExpression>
+          <treeExpression xsi:type="InheritanceExpression" name="Class1-ActivityElement" identity="6afb753b-5745-4c35-a95d-46252ddf78fb" id="i6afb753bz5745z4c35za95dz46252ddf78fb" definitionlevel="definition">
+            <source>i6057dd9az1eecz48d3z822cz94edbf18bcbb</source>
+            <superType>i80f728cczdd2dz4d9fza557z0af2f737917a</superType>
+            <subType>i0f632824z2b5bz4747za24cz8b978c616b94</subType>
+          </treeExpression>
+          <treeExpression xsi:type="InheritanceExpression" name="SyncBar-ActivityElement" identity="ff144870-2d46-4cbe-aa72-40bc70029d87" id="iff144870z2d46z4cbezaa72z40bc70029d87" definitionlevel="definition">
+            <source>i57f8f427z67f3z4b06z8b0bz9c4542c5c807</source>
+            <superType>i80f728cczdd2dz4d9fza557z0af2f737917a</superType>
+            <subType>i55176203ze535z445ez8e30z7c43314bdc6e</subType>
+          </treeExpression>
+          <treeExpression xsi:type="InheritanceExpression" name="Class1-ActivityElement" identity="43646b37-38b1-42ab-a7e6-4a0e88bd11f0" id="i43646b37z38b1z42abza7e6z4a0e88bd11f0" definitionlevel="definition">
+            <source>i86c39e96za1f5z4668z909ez329014559d7f</source>
+            <superType>i80f728cczdd2dz4d9fza557z0af2f737917a</superType>
+            <subType>i3591c484zba80z43bdza8bbz92559a307779</subType>
+          </treeExpression>
+          <treeExpression xsi:type="RoleExpression" name="ActivityElementHasActivityElement.ActivityElement" identity="6b86384c-5acc-4181-b443-8af5f5b94b3f" id="i6b86384cz5accz4181zb443z8af5f5b94b3f" definitionlevel="use" containmentstyle="fromsource">
+            <source>i87b77b32z8a01z4116z9e06zb280c9801331</source>
+            <role>i745b0795z4332z46adzbadfz60a9e583eb1a</role>
+          </treeExpression>
+          <treeExpression xsi:type="ValuePropertyExpression" name="" identity="ab2553d0-9f64-4739-940a-7b57ab020f7c" id="iab2553d0z9f64z4739z940az7b57ab020f7c">
+            <source />
+            <property>iff902ae8z2088z426ezbc2fzbdbd6327a908</property>
+          </treeExpression>
+          <treeExpression xsi:type="ValuePropertyExpression" name="" identity="e75fb6f7-25e4-4a28-b38d-19de04039413" id="ie75fb6f7z25e4z4a28zb38dz19de04039413">
+            <source />
+            <property>iaae25b9eze47bz4aeczbac8zb13f103467ba</property>
+          </treeExpression>
+          <treeExpression xsi:type="ValuePropertyExpression" name="" identity="d5d6a41f-f193-4488-885e-274057310060" id="id5d6a41fzf193z4488z885ez274057310060">
+            <source />
+            <property>ic3562450zdb3az45bfz8855z72645d6cb638</property>
+          </treeExpression>
+          <treeExpression xsi:type="ValuePropertyExpression" name="" identity="38564da0-32a1-42fa-8b66-8f880aeedd12" id="i38564da0z32a1z42faz8b66z8f880aeedd12">
+            <source />
+            <property>i2265a830z2924z42a2za073ze36fc6ca03b6</property>
+          </treeExpression>
+          <treeExpression xsi:type="ValuePropertyExpression" name="" identity="71cb047c-7ef9-4940-9d38-2035d3797ea0" id="i71cb047cz7ef9z4940z9d38z2035d3797ea0">
+            <source />
+            <property>if7e2bda1z2675z4069zbad6z981091cda7f0</property>
+          </treeExpression>
+          <treeExpression xsi:type="ValuePropertyExpression" name="" identity="e7ff8130-345e-4ae5-83d2-040eaca6f648" id="ie7ff8130z345ez4ae5z83d2z040eaca6f648">
+            <source />
+            <property>i8fbbc919zab7bz41dezabaezf87fa2c21140</property>
+          </treeExpression>
+          <treeExpression xsi:type="ValuePropertyExpression" name="" identity="0339f220-18b8-4fd0-a43b-094b9d01abff" id="i0339f220z18b8z4fd0za43bz094b9d01abff">
+            <source />
+            <property>id996070dz5639z492dz973az2868e0f2396b</property>
+          </treeExpression>
+          <treeExpression xsi:type="ValuePropertyExpression" name="" identity="94641633-47b2-4b79-aaf9-bffc3d200eca" id="i94641633z47b2z4b79zaaf9zbffc3d200eca">
+            <source />
+            <property>i27827ad1z3849z4dacza16bze60b76e117d4</property>
+          </treeExpression>
+          <treeExpression xsi:type="ValuePropertyExpression" name="" identity="021ac243-30d7-4b97-9a48-33790ba4c20a" id="i021ac243z30d7z4b97z9a48z33790ba4c20a">
+            <source />
+            <property>i5a76e4b8z260ez4b4dzb0bcz9121c8495335</property>
+          </treeExpression>
+          <treeExpression xsi:type="ValuePropertyExpression" name="" identity="fe6d75a0-1543-46af-9ba6-3b932d140aff" id="ife6d75a0z1543z46afz9ba6z3b932d140aff">
+            <source />
+            <property>iddf1ffcbz43c7z486bz8f08z9a841495ff38</property>
+          </treeExpression>
+          <treeExpression xsi:type="ValuePropertyExpression" name="" identity="a53f965c-cd3d-4c78-a843-c9105d6c6a22" id="ia53f965czcd3dz4c78za843zc9105d6c6a22">
+            <source />
+            <property>ie5ee11c7z3171z4b55z8337z815b7f8949cf</property>
+          </treeExpression>
+        </expressions>
+        <roots>
+          <root name="ConceptA" identity="2f698501-1763-45f4-bd94-4fe1403edbce" id="i2f698501z1763z45f4zbd94z4fe1403edbce">
+            <source />
+            <referencetype>ic4464c49za8faz4fb0zbc25zbb0ba770b788</referencetype>
+          </root>
+          <root name="Transition" identity="8f8fa2d9-52ab-46d2-8ebe-58cff4d112ef" id="i8f8fa2d9z52abz46d2z8ebez58cff4d112ef">
+            <source />
+            <referencetype>ie050dd63zbf41z432eza2c5z43e476179017</referencetype>
+          </root>
+          <root name="TransitionObjectLink" identity="7056ae27-36b9-4207-ae20-01971abf384d" id="i7056ae27z36b9z4207zae20z01971abf384d">
+            <source />
+            <referencetype>iabe207c7ze14az4570zb04bzc97edca7f609</referencetype>
+          </root>
+        </roots>
+        <source>ia88dd312z1251z4ae9zaaeezf39b03b55371</source>
+      </treenavigator>
+      <treenavigator xsi:type="ShadowTreeNavigator" name="serialization" identity="38239ee4-d481-4668-b94d-fffc5aad8383" id="i38239ee4zd481z4668zb94dzfffc5aad8383">
+        <expressions />
+        <roots>
+          <root name="ConceptA" identity="3c1ba970-6dae-4940-9110-64fce79831e9" id="i3c1ba970z6daez4940z9110z64fce79831e9">
+            <source />
+            <referencetype>ic4464c49za8faz4fb0zbc25zbb0ba770b788</referencetype>
+          </root>
+        </roots>
+        <source>ia88dd312z1251z4ae9zaaeezf39b03b55371</source>
+      </treenavigator>
+      <treenavigator xsi:type="ShadowTreeNavigator" name="delete" identity="12bfda99-de08-496b-adbc-cf853b86ee0a" id="i12bfda99zde08z496bzadbczcf853b86ee0a">
+        <expressions>
+          <treeExpression xsi:type="RoleExpression" name="AHasBs.Bs" identity="4dc375dd-fc2b-4404-8476-bd1e00434cb3" id="i4dc375ddzfc2bz4404z8476zbd1e00434cb3" definitionlevel="none" containmentstyle="fromsource">
+            <source>i78405795z51cez4356z8f56zc30da85e8270</source>
+            <role>i7305fa3fz8aa3z43e5zbe13z1e8cc9ef06f2</role>
+          </treeExpression>
+          <treeExpression xsi:type="RoleExpression" name="AHasBs.ConceptA" identity="1ae784e0-52ed-4f57-81bc-d426bbbf438e" id="i1ae784e0z52edz4f57z81bczd426bbbf438e" definitionlevel="none" containmentstyle="reference">
+            <source />
+            <role>i3f9c004ez10d7z4307zb7e8z59b18a295285</role>
+          </treeExpression>
+          <treeExpression xsi:type="RoleExpression" name="BReferencesB.ReferencedB" identity="8b9f54df-eb0b-483d-82ef-aa8dd5724868" id="i8b9f54dfzeb0bz483dz82efzaa8dd5724868" definitionlevel="none" containmentstyle="fromsource">
+            <source>i62c04564ze87ez49d0za796z69bbb7536344</source>
+            <role>id3cd75f5z927dz4418z9cb3z44186b68c94f</role>
+          </treeExpression>
+          <treeExpression xsi:type="RoleExpression" name="BReferencesB.ReferringBs" identity="c4073140-8e63-4fe3-9218-cbb7bda05172" id="ic4073140z8e63z4fe3z9218zcbb7bda05172" definitionlevel="none" containmentstyle="reference">
+            <source />
+            <role>ia6fb5fc4z9bedz41f5zbd52z1d896a401f8c</role>
+          </treeExpression>
+          <treeExpression xsi:type="RoleExpression" name="ActivityElementHasActivityElement.ActivityElement" identity="e9bbb5de-a2d4-44e7-8fa4-9d93e1d31283" id="ie9bbb5deza2d4z44e7z8fa4z9d93e1d31283" definitionlevel="none" containmentstyle="fromsource">
+            <source>i87b77b32z8a01z4116z9e06zb280c9801331</source>
+            <role>i745b0795z4332z46adzbadfz60a9e583eb1a</role>
+          </treeExpression>
+          <treeExpression xsi:type="RoleExpression" name="ActivityElementHasActivityElement.ActivityElement1" identity="5c222b1f-b144-4819-ab6e-f093b165de9d" id="i5c222b1fzb144z4819zab6ezf093b165de9d" definitionlevel="none" containmentstyle="reference">
+            <source />
+            <role>i59333095ze3fbz448dz9194z94e6e29da1fc</role>
+          </treeExpression>
+        </expressions>
+        <roots />
+        <source>ia88dd312z1251z4ae9zaaeezf39b03b55371</source>
+      </treenavigator>
+    </trees>
+    <concepts>
+      <concept name="FeatureModel" identity="c4464c49-a8fa-4fb0-bc25-bb0ba770b788" namespace="ISpySoft.FeatureModelLanguage.DomainModel" id="ic4464c49za8faz4fb0zbc25zbb0ba770b788" isLoaded="true" isAbstract="false">
+        <mdfmetadata xsi:type="conceptorshapemdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" />
+      </concept>
+      <concept name="AbstractFeature" identity="80f728cc-dd2d-4d9f-a557-0af2f737917a" namespace="ISpySoft.FeatureModelLanguage.DomainModel" id="i80f728cczdd2dz4d9fza557z0af2f737917a" isLoaded="true" isAbstract="false">
+        <mdfmetadata xsi:type="conceptorshapemdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" classmodifier="abstract" />
+      </concept>
+      <concept name="Feature" identity="0f632824-2b5b-4747-a24c-8b978c616b94" namespace="ISpySoft.FeatureModelLanguage.DomainModel" id="i0f632824z2b5bz4747za24cz8b978c616b94" isLoaded="true" isAbstract="false">
+        <mdfmetadata xsi:type="conceptorshapemdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" />
+        <superType>i80f728cczdd2dz4d9fza557z0af2f737917a</superType>
+        <valueProperties>
+          <property name="Kind" identity="c3562450-db3a-45bf-8855-72645d6cb638" id="ic3562450zdb3az45bfz8855z72645d6cb638">
+            <mdfmetadata xsi:type="propertymdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" xpathexpression="" reversexpathexpression="" realattributename="" proxyattributename="" customstorage="false" allownulls="false" readwritestate="readwrite" tag="" />
+            <propertyInfo xsi:type="EnumerationPropertyInfo" name="FeatureKind" identity="00000000-0000-0000-0000-000000000000" default="Mandatory">
+              <enumeration>i66b66683z91f8z4673zbc72z3fc612c23de6</enumeration>
+            </propertyInfo>
+          </property>
+          <property name="Condition" identity="8fbbc919-ab7b-41de-abae-f87fa2c21140" id="i8fbbc919zab7bz41dezabaezf87fa2c21140">
+            <mdfmetadata xsi:type="propertymdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" xpathexpression="" reversexpathexpression="" realattributename="" proxyattributename="" customstorage="false" allownulls="false" readwritestate="readwrite" tag="" />
+            <propertyInfo xsi:type="StringPropertyInfo" name="" identity="04240981-10f8-44dd-aae1-e898612ed88a" default="" max="2147483647" />
+          </property>
+          <property name="Constraint" identity="d996070d-5639-492d-973a-2868e0f2396b" id="id996070dz5639z492dz973az2868e0f2396b">
+            <mdfmetadata xsi:type="propertymdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" xpathexpression="" reversexpathexpression="" realattributename="" proxyattributename="" customstorage="false" allownulls="false" readwritestate="readwrite" tag="" />
+            <propertyInfo xsi:type="StringPropertyInfo" name="" identity="fdcfcd27-8dad-46d4-bcf4-f9277b37eacb" default="" max="2147483647" />
+          </property>
+          <property name="Requirements" identity="ddf1ffcb-43c7-486b-8f08-9a841495ff38" id="iddf1ffcbz43c7z486bz8f08z9a841495ff38">
+            <mdfmetadata xsi:type="propertymdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" xpathexpression="" reversexpathexpression="" realattributename="" proxyattributename="" customstorage="false" allownulls="false" readwritestate="readwrite" tag="">
+              <clrattribute name="System.ComponentModel.Editor" parametertext=" typeof(ISpySoft.FeatureModelLanguage.DomainModel.FeaturePropertiesUITypeEditor),typeof(System.Drawing.Design.UITypeEditor)" />
+            </mdfmetadata>
+            <propertyInfo xsi:type="StringPropertyInfo" name="" identity="e55f3c00-c337-400d-981d-d45c830871d0" default="" max="2147483647" />
+          </property>
+        </valueProperties>
+      </concept>
+      <concept name="RootFeature" identity="55176203-e535-445e-8e30-7c43314bdc6e" namespace="ISpySoft.FeatureModelLanguage.DomainModel" id="i55176203ze535z445ez8e30z7c43314bdc6e" isLoaded="true" isAbstract="false">
+        <mdfmetadata xsi:type="conceptorshapemdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" />
+        <superType>i80f728cczdd2dz4d9fza557z0af2f737917a</superType>
+        <valueProperties>
+          <property name="Condition" identity="27827ad1-3849-4dac-a16b-e60b76e117d4" id="i27827ad1z3849z4dacza16bze60b76e117d4">
+            <mdfmetadata xsi:type="propertymdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" xpathexpression="" reversexpathexpression="" realattributename="" proxyattributename="" customstorage="false" allownulls="false" readwritestate="readwrite" tag="" />
+            <propertyInfo xsi:type="StringPropertyInfo" name="" identity="e3557a12-4134-4a49-8bc3-a8bab74d7435" default="" max="2147483647" />
+          </property>
+          <property name="Constraint" identity="5a76e4b8-260e-4b4d-b0bc-9121c8495335" id="i5a76e4b8z260ez4b4dzb0bcz9121c8495335">
+            <mdfmetadata xsi:type="propertymdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" xpathexpression="" reversexpathexpression="" realattributename="" proxyattributename="" customstorage="false" allownulls="false" readwritestate="readwrite" tag="" />
+            <propertyInfo xsi:type="StringPropertyInfo" name="" identity="6aea7095-efdc-4d9a-9afd-4ffddf4a7dee" default="" max="2147483647" />
+          </property>
+          <property name="Requirements" identity="e5ee11c7-3171-4b55-8337-815b7f8949cf" id="ie5ee11c7z3171z4b55z8337z815b7f8949cf">
+            <mdfmetadata xsi:type="propertymdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" xpathexpression="" reversexpathexpression="" realattributename="" proxyattributename="" customstorage="false" allownulls="false" readwritestate="readwrite" tag="">
+              <clrattribute name="System.ComponentModel.Editor" parametertext=" typeof(ISpySoft.FeatureModelLanguage.DomainModel.RootFeaturePropertiesUITypeEditor),typeof(System.Drawing.Design.UITypeEditor)" />
+            </mdfmetadata>
+            <propertyInfo xsi:type="StringPropertyInfo" name="" identity="fa60eb8f-10ea-4fe4-b7d3-aa3356ea82fa" default="" max="2147483647" />
+          </property>
+        </valueProperties>
+      </concept>
+      <concept name="FeatureSet" identity="3591c484-ba80-43bd-a8bb-92559a307779" namespace="ISpySoft.FeatureModelLanguage.DomainModel" id="i3591c484zba80z43bdza8bbz92559a307779" isLoaded="true" isAbstract="false">
+        <mdfmetadata xsi:type="conceptorshapemdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" />
+        <superType>i80f728cczdd2dz4d9fza557z0af2f737917a</superType>
+        <valueProperties>
+          <property name="Min" identity="2265a830-2924-42a2-a073-e36fc6ca03b6" id="i2265a830z2924z42a2za073ze36fc6ca03b6">
+            <mdfmetadata xsi:type="propertymdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" xpathexpression="" reversexpathexpression="" realattributename="" proxyattributename="" customstorage="false" allownulls="false" readwritestate="readwrite" tag="" />
+            <propertyInfo xsi:type="StringPropertyInfo" name="" identity="294dadf6-ea81-4f59-a3d0-7d02b77b6da8" default="" max="2147483647" />
+          </property>
+          <property name="Max" identity="f7e2bda1-2675-4069-bad6-981091cda7f0" id="if7e2bda1z2675z4069zbad6z981091cda7f0">
+            <mdfmetadata xsi:type="propertymdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" xpathexpression="" reversexpathexpression="" realattributename="" proxyattributename="" customstorage="false" allownulls="false" readwritestate="readwrite" tag="" />
+            <propertyInfo xsi:type="StringPropertyInfo" name="" identity="e4f91dd7-6f57-4388-b679-e329212e3b69" default="" max="2147483647" />
+          </property>
+        </valueProperties>
+      </concept>
+    </concepts>
+  </model>
+</dmd>

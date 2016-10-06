@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+This is the manifest for creating an installer for a Domain Specific Language. The text template files 
+(.dslddt) in this project use the information in this file to generate WiX files.  When the project is 
+built, these WiX files are compiled into an MSI package.  To deploy this package, copy all of the files 
+from the project output directory to the target machine, and run the setup.exe.  
+
+ 
+
+Some values in this file are copied from values in the designer definition file (.dsldd) for the DSL. 
+If the designer definition file could not be found, you will need to edit this file to provide correct 
+values for some attributes.  See the Error List for more specific information.
+-->
+<installerDefinition xmlns="http://schemas.microsoft.com/dsltools/dslsetup" 
+  productUrl="InsertProductUrlHere"
+  defaultDirectoryName="ISpySoft Case Study\Software Factory Schema DSL"
+  productVersion="1.0.0.0"
+  requiresCSharp="true"
+  requiresVisualBasic="true"
+  productCode="dca3dbdf-115e-4f3a-afb5-2fe4b8fc6bba"
+  upgradeCode="aed3598c-9838-459a-9460-279a7bc39185">
+	<dslPackage name="SoftwareFactorySchemaDSL" project="Designer" assemblyPath="ISpySoft.SFSchemaLanguage.Designer.dll" registryRoot="Software\Microsoft\VisualStudio\8.0">
+		<fileExtensions>
+			<fileExtension name="SoftwareFactorySchema" extension="sfschema" descriptionKey="FileDescription" hasIcon="true" iconId="0"/>
+		</fileExtensions>
+		<supportingAssemblies>
+			<supportingAssembly name="DomainModel" project="DomainModel" assemblyPath="ISpySoft.SFSchemaLanguage.DomainModel.dll"/>
+		</supportingAssemblies>
+	</dslPackage>
+	<licenseAgreement filePath="Files\EULA.rtf" embed="true" />
+	<supportingFiles>
+		<supportingFile name="Readme" filePath="Files\Readme.htm" installShortcut="true" shortcutIconPath="Resources\ReadmeShortcut.ico" openAfterInstall="true" />
+		<supportingFile name="Activity" filePath="Files\Activity.jpg" openAfterInstall="false" />
+		<supportingFile name="ActivityAndMapping" filePath="Files\ActivityAndMapping.png" openAfterInstall="false" />
+		<supportingFile name="Artifacts" filePath="Files\Artifacts.jpg" openAfterInstall="false" />
+		<supportingFile name="NewProject" filePath="Files\NewProject.jpg" openAfterInstall="false" />
+		<supportingFile name="NewSchema" filePath="Files\NewSchema.png" openAfterInstall="false" />
+		<supportingFile name="Toolbox" filePath="Files\Toolbox.jpg" openAfterInstall="false" />
+		<supportingFile name="Viewpoint" filePath="Files\Viewpoint.jpg" openAfterInstall="false" />
+		<supportingFile name="ISpySoft" filePath="Files\ISpySoft.png" openAfterInstall="false" />
+		<supportingFile name="SFBrowser" filePath="Files\SFBrowser.png" openAfterInstall="false" />
+		<supportingFile name="SFBrowser2" filePath="Files\SFBrowser2.png" openAfterInstall="false" />		
+	</supportingFiles>
+	<!-- 
+	Item Templates don't work properly yet. Probably will need to create a wizard extension or so to make it work smoothly.
+	-->	
+	<vsItemTemplates>
+		<vsItemTemplate localeId="1033" targetDirectories="CSharp" templatePath="Files\SoftwareFactorySchemaItemTemplate.zip"/>
+	</vsItemTemplates>
+  <vsProjectTemplates>
+    <vsProjectTemplate localeId="1033" targetDirectories="CSharp" templatePath="Files\SoftwareFactorySchemaProjectTemplate.zip"/>
+  </vsProjectTemplates>
+</installerDefinition>

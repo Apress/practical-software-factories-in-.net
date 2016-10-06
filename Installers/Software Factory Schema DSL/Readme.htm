@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title>Readme</title>
+	</head>
+	<body style="font-family: Verdana, Arial;">
+	<h1><img src="ISpySoft.png" border=0 align="absMiddle" /> Software Factory Schema DSL</h1>
+	<h2>Installation</h2>
+	<p>For installation of the Software Factory Schema DSL simply double-click
+	on the <i><b>SoftwareFactorySchemaDSL.msi</b></i>, which you can find in the 
+	current directory and follow the on-screen instructions.</p>
+	<h2>Getting started</h2>
+	<ul>
+		<li>Install the Software Factory Schema DSL.</li>
+		<li>Open Visual Studio 2005.</li>
+		<li>Select <i>New-&gt;Project.</i></li>
+		<li>Under Visual C# category select the <i>SoftwareFactorySchemaProject</i> and 
+		enter the Name for the language, the Location on the hard drive and the 
+		Solution Name.</li>
+	</ul>
+	<p>
+        <img border="0" src="NewProject.jpg" width="681" height="495"></p>
+	<ul>
+		<li>In the solution explorer double click on the .sfschema file.</li>
+	</ul>
+	<p><img border="0" src="NewSchema.png" width="276" height="176"></p>
+	<ul>
+		<li>After opening the empty Software Factory Schema document the 
+		Toolbox shows the concepts provided by the Software Factories Schema DSL</li>
+	</ul>
+	<p><img border="0" src="Toolbox.jpg" width="183" height="177"></p>
+	<h2>Elements of a Software Factory Schema</h2>
+	<p>In order to create your schema simply drag the elements from the toolbox 
+	to the document. With a right click on the document surface you can check 
+	the correctness of the diagram. Errors will be shown in the output window. 
+	The different elements are explained below.</p>
+	<h3>Viewpoints</h3>
+	<p>You can add a new viewpoint from the <i>Toolbox</i> onto the schema 
+	document.</p>
+	<p><img border="0" src="Viewpoint.jpg" width="113" height="95"></p>
+	<p>With a right click on the viewpoint you can add a new Stakeholder and in 
+	the <i>Properties Window </i>you can change the name to something 
+	meaningful.</p>
+	<h3>Artifacts</h3>
+	<p>The different kinds of Artifacts (Tools, Work Products and Assets) added 
+	to the schema by simply dragging and dropping an artifact onto the schema 
+	surface. With a double click on the artifact you can change the name to 
+	something more meaningful than the default name and you can select the type 
+	of artifact from the selection menu.</p>
+	<p><img border="0" src="Artifacts.jpg" width="261" height="127"></p>
+	<p>After selecting the artifact type the decorator in the shape will show 
+	you what artifact type it is (A for asset, W for Work Product and T for 
+	tool).</p>
+	<h3>Activities and Mappings</h3>
+	<p>The same way you added artifacts and viewpoints you can add activities 
+	and mappings to the diagram.</p>
+	<p><img border="0" src="ActivityAndMapping.png" width="252" height="59"></p>
+	<p>In the case of mappings you can double click on the shape and a dialog 
+	opens that allows you to add a mapping description to the shape. This 
+	description is currently only text but we can also think of scenarios where 
+	this description is more formal and can be used to generate other output 
+	like transformation scripts from it.</p>
+	<h3>Connectors</h3>
+	<p>Connections are implemented so only correct connections can be made. The 
+	table below shows an overview of allowed connections. It is important to 
+	mention that this is a directed graph. For the table this means that the 
+	left hand column is the source of the connection and the right hand columns 
+	the targets. Some connections are only allowed to be made in one pre-defined 
+	direction. In some cases the tool will ask for additional information from 
+	the user to make the connections valid (for example it will ask if the 
+	connection is read or write connection).</p>
+	<table border="1" width="40%" id="table1">
+		<tr>
+			<td width="111">&nbsp;</td>
+			<td width="143">Viewpoint</td>
+			<td width="55">Asset</td>
+			<td width="55">Work Product</td>
+			<td width="55">Tool</td>
+			<td width="141">Activity</td>
+			<td>Mapping</td>
+		</tr>
+		<tr>
+			<td width="111">Viewpoint</td>
+			<td width="143">N/A</td>
+			<td width="55">Filters</td>
+			<td width="55">Filters</td>
+			<td width="55">Filters</td>
+			<td width="141">Uses</td>
+			<td>N/A</td>
+		</tr>
+		<tr>
+			<td width="111">Asset</td>
+			<td width="143">N/A</td>
+			<td width="55">N/A</td>
+			<td width="55">N/A</td>
+			<td width="55">N/A</td>
+			<td width="141">N/A</td>
+			<td>N/A</td>
+		</tr>
+		<tr>
+			<td width="111">Work Product</td>
+			<td width="143">N/A</td>
+			<td width="55">N/A</td>
+			<td width="55">N/A</td>
+			<td width="55">N/A</td>
+			<td width="141">N/A</td>
+			<td>N/A</td>
+		</tr>
+		<tr>
+			<td width="111">Tool</td>
+			<td width="143">N/A</td>
+			<td width="55">N/A</td>
+			<td width="55">N/A</td>
+			<td width="55">N/A</td>
+			<td width="141">N/A</td>
+			<td>N/A</td>
+		</tr>
+		<tr>
+			<td width="111">Activity</td>
+			<td width="143">N/A</td>
+			<td width="55">Uses</td>
+			<td width="55">Reads/Writes</td>
+			<td width="55">Uses</td>
+			<td width="141">N/A</td>
+			<td>N/A</td>
+		</tr>
+		<tr>
+			<td width="111">Mapping</td>
+			<td width="143">Reads/Writes</td>
+			<td width="55">N/A</td>
+			<td width="55">N/A</td>
+			<td width="55">N/A</td>
+			<td width="141">N/A</td>
+			<td>N/A</td>
+		</tr>
+	</table>
+		<br />
+		<h2>
+			The Software Factory Schema Browser</h2>
+		<p>
+			<img src="SFBrowser.png" border="0" />&nbsp;</p>
+		<p>
+			In order to open the Software Factory Schema Browser you will need to execute the
+			following steps:</p>
+		<ol>
+			<li>Save the Software Factory schema model.</li>
+			<li>In Solution Explorer right-click <em>SoftwareFactorySchemaBrowser.t4</em> and choose
+				<em>Run Custom Tool</em>. This will regenerate <em>SoftwareFactorySchemaBrowser.xml</em>,
+				which is a child of its T4 template. Alternatively you can use the <em>Transform All
+					Templates</em> feature, which is accessible through a toolbar button in Solution
+				Explorer.</li><li>Press F5 to start the project. Visual Studio will open Internet Explorer
+	  with the Software Factory Schema Browser loaded. Note that the XML file references
+	  a stylesheet, which provides the correct HTML formatting.</li></ol>
+		<p>
+			<img src="SFBrowser2.png" border=0 />&nbsp;</p>
+	</body>
+</html>

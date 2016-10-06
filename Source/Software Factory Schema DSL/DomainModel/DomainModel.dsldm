@@ -1,0 +1,315 @@
+<?xml version="1.0"?>
+<dmd xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:dmd">
+  <model name="SFSchemaLanguage" identity="678d8d2e-fe22-4992-919e-f3b5d3bd7c99" id="i678d8d2ezfe22z4992z919ezf3b5d3bd7c99" namespace="ISpySoft.SFSchemaLanguage.DomainModel" isLoaded="true">
+    <mdfmetadata xsi:type="modelmdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" majorversion="1" minorversion="0" alwaysgeneratecollection="false">
+      <copyright />
+      <stringtable resxfile="DomainModel.Resource.resx" resourcesfile="ISpySoft.SFSchemaLanguage.DomainModel.DomainModel.Resource" usefullyqualifiedname="false" />
+      <copyclosure name="SFSchemaLanguageCopyClosure" doccomment="Copy closure visitor filter" />
+      <removeclosure name="SFSchemaLanguageRemoveClosure" doccomment="Remove closure visitor filter" />
+    </mdfmetadata>
+    <extended>
+      <model>i2b131234z7959z458dz834fz2dc0769ce683</model>
+    </extended>
+    <enumerations>
+      <enumeration name="ArtifactType" identity="8ec7ecaf-ac6b-489d-8d7f-f5c68a41bc28" namespace="ISpySoft.SFSchemaLanguage.DomainModel" id="i8ec7ecafzac6bz489dz8d7fzf5c68a41bc28">
+        <literals>
+          <enumerationLiteral name="Asset" identity="071462b9-3416-4511-ad82-281fd14fb2ae" value="0" />
+          <enumerationLiteral name="Tool" identity="95ffd17d-acc6-4942-ab10-5bdb7c51da00" value="1" />
+          <enumerationLiteral name="WorkProduct" identity="26432a6d-2cac-45dc-9dda-e2167637a23f" value="2" />
+        </literals>
+      </enumeration>
+      <enumeration name="ActivityHasArtifactDescription" identity="5140b02f-a0db-4973-833c-9adf162ffb5e" namespace="ISpySoft.SFSchemaLanguage.DomainModel" id="i5140b02fza0dbz4973z833cz9adf162ffb5e">
+        <literals>
+          <enumerationLiteral name="uses" identity="225cfba2-a659-4734-874f-366b63369457" value="0" />
+          <enumerationLiteral name="creates" identity="8ecda2d7-8b10-4ff5-bf48-a00e69356097" value="1" />
+        </literals>
+      </enumeration>
+      <enumeration name="MappingHasViewPointDescription" identity="d532673c-fc06-4a29-a909-922c3d14dfbb" namespace="ISpySoft.SFSchemaLanguage.DomainModel" id="id532673czfc06z4a29za909z922c3d14dfbb">
+        <literals>
+          <enumerationLiteral name="reads" identity="f9215983-cae7-4f3a-b550-4eb5dcc0b498" value="0" />
+          <enumerationLiteral name="writes" identity="d83ca6e7-496c-45e8-bb01-11272f63c2c8" value="1" />
+        </literals>
+      </enumeration>
+    </enumerations>
+    <relationships>
+      <relationship name="SchemaModelHasSchemaModelItem" identity="e1e0d2fd-0fae-44d0-8f65-5b0033e6a9c4" namespace="ISpySoft.SFSchemaLanguage.DomainModel" id="ie1e0d2fdz0faez44d0z8f65z5b0033e6a9c4" isLoaded="true" isAbstract="false">
+        <mdfmetadata xsi:type="mdfclassmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" />
+        <roles>
+          <role name="SchemaModelItems" identity="be5f6fc5-b865-4808-bec3-dda61a2951f7" id="ibe5f6fc5zb865z4808zbec3zdda61a2951f7" min="0" max="0" isUnbounded="true" accepts="all">
+            <mdfmetadata xsi:type="rolemdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" isordered="true" isnavigablefrom="false" />
+            <source>i8dd64750zace4z41aez8e87zfd00cb59fbbc</source>
+            <type>i8bf2e477z8548z4726za95dz1a46557c8fd3</type>
+            <generatedProperty name="SchemaModelItems" identity="8efd80ce-2c2e-4195-98d5-00fdb626d1ae">
+              <referenceType>i8bf2e477z8548z4726za95dz1a46557c8fd3</referenceType>
+            </generatedProperty>
+          </role>
+          <role name="SchemaModel" identity="6a906d5e-bef9-44ed-a74b-0760718c9d60" id="i6a906d5ezbef9z44edza74bz0760718c9d60" min="1" max="1" isUnbounded="false" accepts="none">
+            <mdfmetadata xsi:type="rolemdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" isordered="true" isnavigablefrom="false" />
+            <source>i8bf2e477z8548z4726za95dz1a46557c8fd3</source>
+            <type>i8dd64750zace4z41aez8e87zfd00cb59fbbc</type>
+            <generatedProperty name="SchemaModel" identity="e3cf4210-14ea-470a-8e26-291ecc94908d">
+              <referenceType>i8dd64750zace4z41aez8e87zfd00cb59fbbc</referenceType>
+            </generatedProperty>
+          </role>
+        </roles>
+      </relationship>
+      <relationship name="SchemaModelItemHasSchemaModelItem" identity="3dde17d9-a249-4173-a6ff-296dcc89ca88" namespace="ISpySoft.SFSchemaLanguage.DomainModel" id="i3dde17d9za249z4173za6ffz296dcc89ca88" isLoaded="true" isAbstract="false">
+        <mdfmetadata xsi:type="mdfclassmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" />
+        <valueProperties>
+          <property name="Description" identity="f0aa6333-110e-4a5b-9749-05ebcc90d2f2" id="if0aa6333z110ez4a5bz9749z05ebcc90d2f2">
+            <mdfmetadata xsi:type="propertymdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" xpathexpression="" reversexpathexpression="" realattributename="" proxyattributename="" customstorage="false" allownulls="false" readwritestate="readwrite" tag="">
+              <clrattribute name="System.ComponentModel.TypeConverter" parametertext="typeof(ISpySoft.SFSchemaLanguage.DomainModel.ConnnectionDescriptionTypeConverter)" />
+            </mdfmetadata>
+            <propertyInfo xsi:type="StringPropertyInfo" name="" identity="95cdcb58-ec67-42a9-b3ff-c39a1c41d8a5" default="" max="2147483647" />
+          </property>
+        </valueProperties>
+        <roles>
+          <role name="SchemaModelItemTarget" identity="72314d31-07ff-4253-9eac-6436a4a7dafa" id="i72314d31z07ffz4253z9eacz6436a4a7dafa" min="0" max="0" isUnbounded="true" accepts="none">
+            <mdfmetadata xsi:type="rolemdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" isordered="true" isnavigablefrom="false" />
+            <source>i8bf2e477z8548z4726za95dz1a46557c8fd3</source>
+            <type>i8bf2e477z8548z4726za95dz1a46557c8fd3</type>
+            <generatedProperty name="SchemaModelItemTarget" identity="82caad58-c82a-4fa8-8f30-1a842efc2bc2">
+              <referenceType>i8bf2e477z8548z4726za95dz1a46557c8fd3</referenceType>
+            </generatedProperty>
+          </role>
+          <role name="SchemaModelItemSource" identity="b2324809-b120-456f-b597-ce9a1bac9305" id="ib2324809zb120z456fzb597zce9a1bac9305" min="0" max="0" isUnbounded="true" accepts="none">
+            <mdfmetadata xsi:type="rolemdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" isordered="true" isnavigablefrom="false" />
+            <source>i8bf2e477z8548z4726za95dz1a46557c8fd3</source>
+            <type>i8bf2e477z8548z4726za95dz1a46557c8fd3</type>
+            <generatedProperty name="SchemaModelItemSource" identity="fdaa3531-7aca-49de-8bc3-c3b5e8a35800">
+              <referenceType>i8bf2e477z8548z4726za95dz1a46557c8fd3</referenceType>
+            </generatedProperty>
+          </role>
+        </roles>
+      </relationship>
+      <relationship name="ViewPointHasStakeholder" identity="a04f576e-9628-4548-bad6-214ebb7c613c" namespace="ISpySoft.SFSchemaLanguage.DomainModel" id="ia04f576ez9628z4548zbad6z214ebb7c613c" isLoaded="true" isAbstract="false">
+        <mdfmetadata xsi:type="mdfclassmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" />
+        <roles>
+          <role name="Stakeholders" identity="7787fa13-a92f-4466-b859-56a7546128fa" id="i7787fa13za92fz4466zb859z56a7546128fa" min="0" max="0" isUnbounded="true" accepts="all">
+            <mdfmetadata xsi:type="rolemdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" isordered="true" isnavigablefrom="false" />
+            <source>ibadf2b84zd0bbz4ad9zae6az2e6f01f0ae08</source>
+            <type>i58b0f271ze684z4f18zb842zce070fc87b93</type>
+            <generatedProperty name="Stakeholders" identity="31fb0fab-3463-479e-bb47-522acca2e9ed">
+              <referenceType>i58b0f271ze684z4f18zb842zce070fc87b93</referenceType>
+            </generatedProperty>
+          </role>
+          <role name="ViewPoint" identity="beddb5bc-140b-4331-b3d8-c3fe08677dda" id="ibeddb5bcz140bz4331zb3d8zc3fe08677dda" min="0" max="1" isUnbounded="false" accepts="none">
+            <mdfmetadata xsi:type="rolemdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" isordered="true" isnavigablefrom="false" />
+            <source>i58b0f271ze684z4f18zb842zce070fc87b93</source>
+            <type>ibadf2b84zd0bbz4ad9zae6az2e6f01f0ae08</type>
+            <generatedProperty name="ViewPoint" identity="4f484d85-1cdd-4df5-afd4-5c5195ce25a7">
+              <referenceType>ibadf2b84zd0bbz4ad9zae6az2e6f01f0ae08</referenceType>
+            </generatedProperty>
+          </role>
+        </roles>
+      </relationship>
+    </relationships>
+    <trees>
+      <treenavigator name="intrinsic" identity="1d9ede84-e376-4bb2-b8a1-baf3e8563f4b" id="i1d9ede84ze376z4bb2zb8a1zbaf3e8563f4b">
+        <expressions>
+          <treeExpression xsi:type="RoleExpression" name="SchemaModelHasClass13.Class1" identity="03fe63b3-3509-4394-b4f8-cc6ea295dd51" id="i03fe63b3z3509z4394zb4f8zcc6ea295dd51" definitionlevel="none" containmentstyle="embedding">
+            <source />
+            <role>ibe5f6fc5zb865z4808zbec3zdda61a2951f7</role>
+          </treeExpression>
+          <treeExpression xsi:type="RoleExpression" name="SchemaModelItemHasSchemaModelItem.SchemaModelItem" identity="3ae16c90-ac0f-4c69-99d2-0c87d5ca6c1d" id="i3ae16c90zac0fz4c69z99d2z0c87d5ca6c1d" definitionlevel="none" containmentstyle="reference">
+            <source />
+            <role>i72314d31z07ffz4253z9eacz6436a4a7dafa</role>
+          </treeExpression>
+          <treeExpression xsi:type="InheritanceExpression" name="Class1-SchemaModelItem" identity="efebaa67-d711-4f00-8d94-c7253cddf1f2" id="iefebaa67zd711z4f00z8d94zc7253cddf1f2" definitionlevel="none">
+            <source />
+            <superType>i8bf2e477z8548z4726za95dz1a46557c8fd3</superType>
+            <subType>ibb769fdfz3091z4266z9fafzfc1ab52d1ad0</subType>
+          </treeExpression>
+          <treeExpression xsi:type="InheritanceExpression" name="Class1-SchemaModelItem" identity="63a69d87-d05b-4b01-b724-f3f9d39c84fe" id="i63a69d87zd05bz4b01zb724zf3f9d39c84fe" definitionlevel="none">
+            <source />
+            <superType>i8bf2e477z8548z4726za95dz1a46557c8fd3</superType>
+            <subType>ibadf2b84zd0bbz4ad9zae6az2e6f01f0ae08</subType>
+          </treeExpression>
+          <treeExpression xsi:type="RoleExpression" name="ViewPointHasClass1.Class1" identity="e5d95544-db16-4fd8-867d-f261e864f879" id="ie5d95544zdb16z4fd8z867dzf261e864f879" definitionlevel="none" containmentstyle="embedding">
+            <source />
+            <role>i7787fa13za92fz4466zb859z56a7546128fa</role>
+          </treeExpression>
+          <treeExpression xsi:type="InheritanceExpression" name="Class1-SchemaModelItem" identity="10d4e733-7d18-4c84-a87b-d88729b729bc" id="i10d4e733z7d18z4c84za87bzd88729b729bc" definitionlevel="none">
+            <source />
+            <superType>i8bf2e477z8548z4726za95dz1a46557c8fd3</superType>
+            <subType>if9f42e18ze1e9z4f3az9dd6zd1375cc8c664</subType>
+          </treeExpression>
+          <treeExpression xsi:type="InheritanceExpression" name="Class1-SchemaModelItem" identity="6fc5afe2-da5b-41fa-beec-363295c2a6e4" id="i6fc5afe2zda5bz41fazbeecz363295c2a6e4" definitionlevel="none">
+            <source />
+            <superType>i8bf2e477z8548z4726za95dz1a46557c8fd3</superType>
+            <subType>i421d9337z3c74z4c83zbbbczc53d300a15a2</subType>
+          </treeExpression>
+        </expressions>
+        <roots />
+      </treenavigator>
+      <treenavigator xsi:type="ShadowTreeNavigator" name="completeDiagram" identity="66f6ce96-abfe-4ba0-b9be-b92f0f1cea8f" id="i66f6ce96zabfez4ba0zb9bezb92f0f1cea8f">
+        <expressions>
+          <treeExpression xsi:type="RoleExpression" name="SchemaModelHasClass13.Class1" identity="ad306ee4-d1c0-4689-9691-ec6acb99494c" id="iad306ee4zd1c0z4689z9691zec6acb99494c" definitionlevel="definition" containmentstyle="fromsource">
+            <source>i03fe63b3z3509z4394zb4f8zcc6ea295dd51</source>
+            <role>ibe5f6fc5zb865z4808zbec3zdda61a2951f7</role>
+          </treeExpression>
+          <treeExpression xsi:type="RoleExpression" name="SchemaModelItemHasSchemaModelItem.SchemaModelItem" identity="b2e71590-18e0-45e2-b81a-581d93d150a4" id="ib2e71590z18e0z45e2zb81az581d93d150a4" definitionlevel="use" containmentstyle="fromsource">
+            <source>i3ae16c90zac0fz4c69z99d2z0c87d5ca6c1d</source>
+            <role>i72314d31z07ffz4253z9eacz6436a4a7dafa</role>
+          </treeExpression>
+          <treeExpression xsi:type="InheritanceExpression" name="Class1-SchemaModelItem" identity="8bf5ec4a-6d76-4b77-a399-bbc5a1118b48" id="i8bf5ec4az6d76z4b77za399zbbc5a1118b48" definitionlevel="definition">
+            <source>iefebaa67zd711z4f00z8d94zc7253cddf1f2</source>
+            <superType>i8bf2e477z8548z4726za95dz1a46557c8fd3</superType>
+            <subType>ibb769fdfz3091z4266z9fafzfc1ab52d1ad0</subType>
+          </treeExpression>
+          <treeExpression xsi:type="InheritanceExpression" name="Class1-SchemaModelItem" identity="5622d10b-b3ef-452b-9274-cfb500d50a75" id="i5622d10bzb3efz452bz9274zcfb500d50a75" definitionlevel="definition">
+            <source>i63a69d87zd05bz4b01zb724zf3f9d39c84fe</source>
+            <superType>i8bf2e477z8548z4726za95dz1a46557c8fd3</superType>
+            <subType>ibadf2b84zd0bbz4ad9zae6az2e6f01f0ae08</subType>
+          </treeExpression>
+          <treeExpression xsi:type="RoleExpression" name="ViewPointHasClass1.Class1" identity="a75daf23-deef-4b3a-948d-e42b5d5a94d4" id="ia75daf23zdeefz4b3az948dze42b5d5a94d4" definitionlevel="definition" containmentstyle="fromsource">
+            <source>ie5d95544zdb16z4fd8z867dzf261e864f879</source>
+            <role>i7787fa13za92fz4466zb859z56a7546128fa</role>
+          </treeExpression>
+          <treeExpression xsi:type="InheritanceExpression" name="Class1-SchemaModelItem" identity="49bb5226-ce5b-4b5b-a931-c47f0809b974" id="i49bb5226zce5bz4b5bza931zc47f0809b974" definitionlevel="definition">
+            <source>i10d4e733z7d18z4c84za87bzd88729b729bc</source>
+            <superType>i8bf2e477z8548z4726za95dz1a46557c8fd3</superType>
+            <subType>if9f42e18ze1e9z4f3az9dd6zd1375cc8c664</subType>
+          </treeExpression>
+          <treeExpression xsi:type="ValuePropertyExpression" name="" identity="2b23a75c-642b-4245-8606-410be923b36c" id="i2b23a75cz642bz4245z8606z410be923b36c">
+            <source />
+            <property>if41f92c6z34daz4824z9f50z99320648daf6</property>
+          </treeExpression>
+          <treeExpression xsi:type="InheritanceExpression" name="Class1-SchemaModelItem" identity="d2a2357d-ebbd-4272-94b5-8f6f8c908981" id="id2a2357dzebbdz4272z94b5z8f6f8c908981" definitionlevel="definition">
+            <source>i6fc5afe2zda5bz41fazbeecz363295c2a6e4</source>
+            <superType>i8bf2e477z8548z4726za95dz1a46557c8fd3</superType>
+            <subType>i421d9337z3c74z4c83zbbbczc53d300a15a2</subType>
+          </treeExpression>
+          <treeExpression xsi:type="ValuePropertyExpression" name="" identity="5295ce54-a957-4f0b-a58a-61573dc8be17" id="i5295ce54za957z4f0bza58az61573dc8be17">
+            <source />
+            <property>i238c8cd9za113z48dbz934cz3fa74ff298e4</property>
+          </treeExpression>
+          <treeExpression xsi:type="ValuePropertyExpression" name="" identity="431adfef-5305-4b0d-bd7f-20dc0a8b4658" id="i431adfefz5305z4b0dzbd7fz20dc0a8b4658">
+            <source />
+            <property>if0aa6333z110ez4a5bz9749z05ebcc90d2f2</property>
+          </treeExpression>
+          <treeExpression xsi:type="ValuePropertyExpression" name="" identity="d3f6a51b-f773-4095-9957-f9a30a8be082" id="id3f6a51bzf773z4095z9957zf9a30a8be082">
+            <source />
+            <property>i9fb7ce4azfc7bz4383zb533zdbd1cdb5c0ac</property>
+          </treeExpression>
+          <treeExpression xsi:type="ValuePropertyExpression" name="" identity="732cc07f-6393-44f5-8836-d1b35ddf3ecd" id="i732cc07fz6393z44f5z8836zd1b35ddf3ecd">
+            <source />
+            <property>ic4899c1az039bz485fzb490z1d18cb286f96</property>
+          </treeExpression>
+          <treeExpression xsi:type="ValuePropertyExpression" name="" identity="96c80727-7887-46c0-afb8-fe8ad120ae0f" id="i96c80727z7887z46c0zafb8zfe8ad120ae0f">
+            <source />
+            <property>i0a5feb78zc746z4962za695zf25320e4df81</property>
+          </treeExpression>
+        </expressions>
+        <roots>
+          <root name="ConceptA" identity="42c04d25-c506-4d2e-b6ed-1ebda0fc85fd" id="i42c04d25zc506z4d2ezb6edz1ebda0fc85fd">
+            <source />
+            <referencetype>i8dd64750zace4z41aez8e87zfd00cb59fbbc</referencetype>
+          </root>
+          <root name="SchemaModelItemHasSchemaModelItem" identity="47571a4c-2b9e-4934-82de-3f28e00c8ca5" id="i47571a4cz2b9ez4934z82dez3f28e00c8ca5">
+            <source />
+            <referencetype>i3dde17d9za249z4173za6ffz296dcc89ca88</referencetype>
+          </root>
+        </roots>
+        <source>i1d9ede84ze376z4bb2zb8a1zbaf3e8563f4b</source>
+      </treenavigator>
+      <treenavigator xsi:type="ShadowTreeNavigator" name="serialization" identity="22b99745-40dc-426b-9b35-a981194f02ce" id="i22b99745z40dcz426bz9b35za981194f02ce">
+        <expressions />
+        <roots>
+          <root name="ConceptA" identity="dd337d03-548f-45ec-a640-60adbbe50d4f" id="idd337d03z548fz45ecza640z60adbbe50d4f">
+            <source />
+            <referencetype>i8dd64750zace4z41aez8e87zfd00cb59fbbc</referencetype>
+          </root>
+        </roots>
+        <source>i1d9ede84ze376z4bb2zb8a1zbaf3e8563f4b</source>
+      </treenavigator>
+      <treenavigator xsi:type="ShadowTreeNavigator" name="delete" identity="bdfef724-b19e-4150-89c6-050a7b89fc73" id="ibdfef724zb19ez4150z89c6z050a7b89fc73">
+        <expressions>
+          <treeExpression xsi:type="RoleExpression" name="SchemaModelHasClass13.Class1" identity="2eb026be-ea32-4760-b15f-5e321dceffc1" id="i2eb026bezea32z4760zb15fz5e321dceffc1" definitionlevel="none" containmentstyle="fromsource">
+            <source>i03fe63b3z3509z4394zb4f8zcc6ea295dd51</source>
+            <role>ibe5f6fc5zb865z4808zbec3zdda61a2951f7</role>
+          </treeExpression>
+          <treeExpression xsi:type="RoleExpression" name="SchemaModelHasClass13.SchemaModel" identity="d0685ba1-37c0-4f1d-beca-a9039c5bdfe3" id="id0685ba1z37c0z4f1dzbecaza9039c5bdfe3" definitionlevel="none" containmentstyle="reference">
+            <source />
+            <role>i6a906d5ezbef9z44edza74bz0760718c9d60</role>
+          </treeExpression>
+          <treeExpression xsi:type="RoleExpression" name="SchemaModelItemHasSchemaModelItem.SchemaModelItem" identity="e4165942-4251-43e8-b9df-d6bf76e0d1c9" id="ie4165942z4251z43e8zb9dfzd6bf76e0d1c9" definitionlevel="none" containmentstyle="fromsource">
+            <source>i3ae16c90zac0fz4c69z99d2z0c87d5ca6c1d</source>
+            <role>i72314d31z07ffz4253z9eacz6436a4a7dafa</role>
+          </treeExpression>
+          <treeExpression xsi:type="RoleExpression" name="SchemaModelItemHasSchemaModelItem.SchemaModelItem1" identity="6312f5b8-f9af-4faa-ab66-18bec17327ab" id="i6312f5b8zf9afz4faazab66z18bec17327ab" definitionlevel="none" containmentstyle="reference">
+            <source />
+            <role>ib2324809zb120z456fzb597zce9a1bac9305</role>
+          </treeExpression>
+          <treeExpression xsi:type="RoleExpression" name="ViewPointHasClass1.Class1" identity="0c5a4b47-c640-43e5-ade5-2877711b037f" id="i0c5a4b47zc640z43e5zade5z2877711b037f" definitionlevel="none" containmentstyle="fromsource">
+            <source>ie5d95544zdb16z4fd8z867dzf261e864f879</source>
+            <role>i7787fa13za92fz4466zb859z56a7546128fa</role>
+          </treeExpression>
+          <treeExpression xsi:type="RoleExpression" name="ViewPointHasClass1.ViewPoint" identity="ab2d47a3-007a-49e7-b0f2-22618da8b733" id="iab2d47a3z007az49e7zb0f2z22618da8b733" definitionlevel="none" containmentstyle="reference">
+            <source />
+            <role>ibeddb5bcz140bz4331zb3d8zc3fe08677dda</role>
+          </treeExpression>
+        </expressions>
+        <roots />
+        <source>i1d9ede84ze376z4bb2zb8a1zbaf3e8563f4b</source>
+      </treenavigator>
+    </trees>
+    <concepts>
+      <concept name="SchemaModel" identity="8dd64750-ace4-41ae-8e87-fd00cb59fbbc" namespace="ISpySoft.SFSchemaLanguage.DomainModel" id="i8dd64750zace4z41aez8e87zfd00cb59fbbc" isLoaded="true" isAbstract="false">
+        <mdfmetadata xsi:type="conceptorshapemdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" />
+      </concept>
+      <concept name="SchemaModelItem" identity="8bf2e477-8548-4726-a95d-1a46557c8fd3" namespace="ISpySoft.SFSchemaLanguage.DomainModel" id="i8bf2e477z8548z4726za95dz1a46557c8fd3" isLoaded="true" isAbstract="false">
+        <mdfmetadata xsi:type="conceptorshapemdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" />
+      </concept>
+      <concept name="Activity" identity="bb769fdf-3091-4266-9faf-fc1ab52d1ad0" namespace="ISpySoft.SFSchemaLanguage.DomainModel" id="ibb769fdfz3091z4266z9fafzfc1ab52d1ad0" isLoaded="true" isAbstract="false">
+        <mdfmetadata xsi:type="conceptorshapemdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" />
+        <superType>i8bf2e477z8548z4726za95dz1a46557c8fd3</superType>
+        <valueProperties>
+          <property name="Description" identity="0a5feb78-c746-4962-a695-f25320e4df81" id="i0a5feb78zc746z4962za695zf25320e4df81">
+            <mdfmetadata xsi:type="propertymdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" xpathexpression="" reversexpathexpression="" realattributename="" proxyattributename="" customstorage="false" allownulls="false" readwritestate="readwrite" tag="" />
+            <propertyInfo xsi:type="StringPropertyInfo" name="" identity="87510781-5411-4db3-802f-002947d074bc" default="" max="2147483647" />
+          </property>
+        </valueProperties>
+      </concept>
+      <concept name="ViewPoint" identity="badf2b84-d0bb-4ad9-ae6a-2e6f01f0ae08" namespace="ISpySoft.SFSchemaLanguage.DomainModel" id="ibadf2b84zd0bbz4ad9zae6az2e6f01f0ae08" isLoaded="true" isAbstract="false">
+        <mdfmetadata xsi:type="conceptorshapemdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" />
+        <superType>i8bf2e477z8548z4726za95dz1a46557c8fd3</superType>
+        <valueProperties>
+          <property name="Description" identity="9fb7ce4a-fc7b-4383-b533-dbd1cdb5c0ac" id="i9fb7ce4azfc7bz4383zb533zdbd1cdb5c0ac">
+            <mdfmetadata xsi:type="propertymdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" xpathexpression="" reversexpathexpression="" realattributename="" proxyattributename="" customstorage="false" allownulls="false" readwritestate="readwrite" tag="" />
+            <propertyInfo xsi:type="StringPropertyInfo" name="" identity="4b57dabe-85e4-477c-aec1-f2b7b7702096" default="" max="2147483647" />
+          </property>
+        </valueProperties>
+      </concept>
+      <concept name="Stakeholder" identity="58b0f271-e684-4f18-b842-ce070fc87b93" namespace="ISpySoft.SFSchemaLanguage.DomainModel" id="i58b0f271ze684z4f18zb842zce070fc87b93" isLoaded="true" isAbstract="false">
+        <mdfmetadata xsi:type="conceptorshapemdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" />
+      </concept>
+      <concept name="Mapping" identity="f9f42e18-e1e9-4f3a-9dd6-d1375cc8c664" namespace="ISpySoft.SFSchemaLanguage.DomainModel" id="if9f42e18ze1e9z4f3az9dd6zd1375cc8c664" isLoaded="true" isAbstract="false">
+        <mdfmetadata xsi:type="conceptorshapemdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" />
+        <superType>i8bf2e477z8548z4726za95dz1a46557c8fd3</superType>
+        <valueProperties>
+          <property name="Description" identity="f41f92c6-34da-4824-9f50-99320648daf6" id="if41f92c6z34daz4824z9f50z99320648daf6">
+            <mdfmetadata xsi:type="propertymdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" xpathexpression="" reversexpathexpression="" realattributename="" proxyattributename="" customstorage="false" allownulls="false" readwritestate="readwrite" tag="" />
+            <propertyInfo xsi:type="StringPropertyInfo" name="" identity="73c57d49-c392-4d8b-b64a-0d1b4661503f" default="" max="2147483647" />
+          </property>
+        </valueProperties>
+      </concept>
+      <concept name="Artifact" identity="421d9337-3c74-4c83-bbbc-c53d300a15a2" namespace="ISpySoft.SFSchemaLanguage.DomainModel" id="i421d9337z3c74z4c83zbbbczc53d300a15a2" isLoaded="true" isAbstract="false">
+        <mdfmetadata xsi:type="conceptorshapemdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" />
+        <superType>i8bf2e477z8548z4726za95dz1a46557c8fd3</superType>
+        <valueProperties>
+          <property name="Type" identity="238c8cd9-a113-48db-934c-3fa74ff298e4" id="i238c8cd9za113z48dbz934cz3fa74ff298e4">
+            <mdfmetadata xsi:type="propertymdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" xpathexpression="" reversexpathexpression="" realattributename="" proxyattributename="" customstorage="false" allownulls="false" readwritestate="readwrite" tag="" />
+            <propertyInfo xsi:type="EnumerationPropertyInfo" name="ArtifactType" identity="00000000-0000-0000-0000-000000000000" default="Asset">
+              <enumeration>i8ec7ecafzac6bz489dz8d7fzf5c68a41bc28</enumeration>
+            </propertyInfo>
+          </property>
+          <property name="Description" identity="c4899c1a-039b-485f-b490-1d18cb286f96" id="ic4899c1az039bz485fzb490z1d18cb286f96">
+            <mdfmetadata xsi:type="propertymdfmetadata" accessmodifier="public" category="" description="" doccomment="" localize="false" xpathexpression="" reversexpathexpression="" realattributename="" proxyattributename="" customstorage="false" allownulls="false" readwritestate="readwrite" tag="" />
+            <propertyInfo xsi:type="StringPropertyInfo" name="" identity="067bc52f-2dc1-4ba2-8983-8e91da53156f" default="" max="2147483647" />
+          </property>
+        </valueProperties>
+      </concept>
+    </concepts>
+  </model>
+</dmd>

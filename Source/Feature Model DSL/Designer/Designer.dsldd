@@ -1,0 +1,246 @@
+<?xml version="1.0"?>
+<designerDefinition namespace="ISpySoft.FeatureModelLanguage.Designer" name="FeatureModelLanguage" fileExtension="featuremodel" companyName="CompanyName" productName="FeatureModelLanguageDesigner" packageName="FeatureModelLanguageDesigner" productVersion="1.0.0.0" xmlns="http://schemas.microsoft.com/dsltools/dsldd">
+  <validation open="true" save="true" menu="true" custom="false"/>
+  <explorer>
+    <defaultRenderings>
+    </defaultRenderings>
+    <roots>
+      <elementNode useDefaultRendering="true">
+        <childCollections/>
+        <class>ISpySoft.FeatureModelLanguage.DomainModel.FeatureModelLanguage/FeatureModel</class>
+      </elementNode>
+    </roots>
+  </explorer>
+  <notation>
+    <diagramMaps>
+      <diagramMap>
+        <class>ISpySoft.FeatureModelLanguage.DomainModel.FeatureModelLanguage/FeatureModel</class>
+        <connectorMaps>
+          <connectorMap>
+            <class>ISpySoft.FeatureModelLanguage.DomainModel.FeatureModelLanguage/RelationshipFeature</class>
+            <connector>ISpySoft.FeatureModelLanguage.Designer.FeatureModelLanguageDiagram/Connectors/RelationshipFeatureConnector</connector>
+            <sourceMap>
+              <modelNavigationExpression>
+                <roleExpression>
+                  <role>ISpySoft.FeatureModelLanguage.DomainModel.FeatureModelLanguage/AbstractFeature/TransitionFrom</role>
+                </roleExpression>
+              </modelNavigationExpression>
+            </sourceMap>
+            <targetMap>
+              <modelNavigationExpression>
+                <roleExpression>
+                  <role>ISpySoft.FeatureModelLanguage.DomainModel.FeatureModelLanguage/AbstractFeature/TransitionTo</role>
+                </roleExpression>
+              </modelNavigationExpression>
+            </targetMap>
+          </connectorMap>
+          <connectorMap>
+            <class>ISpySoft.FeatureModelLanguage.DomainModel.FeatureModelLanguage/RelationshipFeatureSet</class>
+            <connector>ISpySoft.FeatureModelLanguage.Designer.FeatureModelLanguageDiagram/Connectors/RelationshipFeatureSetConnector</connector>
+            <sourceMap>
+              <modelNavigationExpression>
+                <roleExpression>
+                  <role>ISpySoft.FeatureModelLanguage.DomainModel.FeatureModelLanguage/RelationshipFeatureSet/ObjectTransitionFrom</role>
+                </roleExpression>
+              </modelNavigationExpression>
+            </sourceMap>
+            <targetMap>
+              <modelNavigationExpression>
+                <roleExpression>
+                  <role>ISpySoft.FeatureModelLanguage.DomainModel.FeatureModelLanguage/RelationshipFeatureSet/ObjectTransitionTo</role>
+                </roleExpression>
+              </modelNavigationExpression>
+            </targetMap>
+          </connectorMap>
+        </connectorMaps>
+        <diagram>ISpySoft.FeatureModelLanguage.Designer.FeatureModelLanguageDiagram</diagram>
+        <shapeMaps>
+          <shapeMap>
+            <class>ISpySoft.FeatureModelLanguage.DomainModel.FeatureModelLanguage/FeatureSet</class>
+            <iconMaps>
+            </iconMaps>
+            <melCollectionExpression>
+              <roleExpression>
+                <role>ISpySoft.FeatureModelLanguage.DomainModel.FeatureModelLanguage/FeatureModel/Elements</role>
+              </roleExpression>
+            </melCollectionExpression>
+            <shape>ISpySoft.FeatureModelLanguage.Designer.FeatureModelLanguageDiagram/Shapes/FeatureSetShape</shape>
+            <textMaps>
+              <shapeTextMap>
+                <textDecorator>ISpySoft.FeatureModelLanguage.Designer.FeatureModelLanguageDiagram/Shapes/FeatureSetShape/Decorators/Min</textDecorator>
+                <valueExpression>
+                  <valuePropertyExpression>
+                    <valueProperty>ISpySoft.FeatureModelLanguage.DomainModel.FeatureModelLanguage/FeatureSet/Min</valueProperty>
+                  </valuePropertyExpression>
+                </valueExpression>
+              </shapeTextMap>
+              <shapeTextMap>
+                <textDecorator>ISpySoft.FeatureModelLanguage.Designer.FeatureModelLanguageDiagram/Shapes/FeatureSetShape/Decorators/Max</textDecorator>
+                <valueExpression>
+                  <valuePropertyExpression>
+                    <valueProperty>ISpySoft.FeatureModelLanguage.DomainModel.FeatureModelLanguage/FeatureSet/Max</valueProperty>
+                  </valuePropertyExpression>
+                </valueExpression>
+              </shapeTextMap>
+            </textMaps>
+          </shapeMap>
+          <shapeMap>
+            <class>ISpySoft.FeatureModelLanguage.DomainModel.FeatureModelLanguage/Feature</class>
+            <iconMaps>
+              <shapeIconMap>
+                <iconDecorator>ISpySoft.FeatureModelLanguage.Designer.FeatureModelLanguageDiagram/Shapes/FeatureShape/Decorators/MandatoryIcon</iconDecorator>
+                <visibilityExpression>
+                  <enumerationBooleanExpression>
+                    <valueProperty>ISpySoft.FeatureModelLanguage.DomainModel.FeatureModelLanguage/Feature/Kind</valueProperty>
+                    <choices>
+                      <cdlEnumerationLiteral>ISpySoft.FeatureModelLanguage.DomainModel.FeatureModelLanguage/FeatureKind/Mandatory</cdlEnumerationLiteral>
+                    </choices>
+                  </enumerationBooleanExpression>
+                </visibilityExpression>
+              </shapeIconMap>
+              <shapeIconMap>
+                <iconDecorator>ISpySoft.FeatureModelLanguage.Designer.FeatureModelLanguageDiagram/Shapes/FeatureShape/Decorators/OptionalIcon</iconDecorator>
+                <visibilityExpression>
+                  <enumerationBooleanExpression>
+                    <valueProperty>ISpySoft.FeatureModelLanguage.DomainModel.FeatureModelLanguage/Feature/Kind</valueProperty>
+                    <choices>
+                      <cdlEnumerationLiteral>ISpySoft.FeatureModelLanguage.DomainModel.FeatureModelLanguage/FeatureKind/Optional</cdlEnumerationLiteral>
+                    </choices>
+                  </enumerationBooleanExpression>
+                </visibilityExpression>
+              </shapeIconMap>
+            </iconMaps>
+            <melCollectionExpression>
+              <roleExpression>
+                <role>ISpySoft.FeatureModelLanguage.DomainModel.FeatureModelLanguage/FeatureModel/Elements</role>
+              </roleExpression>
+            </melCollectionExpression>
+            <shape>ISpySoft.FeatureModelLanguage.Designer.FeatureModelLanguageDiagram/Shapes/FeatureShape</shape>
+            <textMaps>
+              <shapeTextMap>
+                <textDecorator>ISpySoft.FeatureModelLanguage.Designer.FeatureModelLanguageDiagram/Shapes/FeatureShape/Decorators/Name</textDecorator>
+                <valueExpression>
+                  <valuePropertyExpression>
+                    <valueProperty>ISpySoft.FeatureModelLanguage.DomainModel.FeatureModelLanguage/Feature/Name</valueProperty>
+                  </valuePropertyExpression>
+                </valueExpression>
+              </shapeTextMap>
+            </textMaps>
+          </shapeMap>
+          <shapeMap>
+            <class>ISpySoft.FeatureModelLanguage.DomainModel.FeatureModelLanguage/RootFeature</class>
+            <melCollectionExpression>
+              <roleExpression>
+                <role>ISpySoft.FeatureModelLanguage.DomainModel.FeatureModelLanguage/FeatureModel/Elements</role>
+              </roleExpression>
+            </melCollectionExpression>
+            <shape>ISpySoft.FeatureModelLanguage.Designer.FeatureModelLanguageDiagram/Shapes/RootFeatureShape</shape>
+            <textMaps>
+              <shapeTextMap>
+                <textDecorator>ISpySoft.FeatureModelLanguage.Designer.FeatureModelLanguageDiagram/Shapes/RootFeatureShape/Decorators/Name</textDecorator>
+                <valueExpression>
+                  <valuePropertyExpression>
+                    <valueProperty>ISpySoft.FeatureModelLanguage.DomainModel.FeatureModelLanguage/RootFeature/Name</valueProperty>
+                  </valuePropertyExpression>
+                </valueExpression>
+              </shapeTextMap>
+            </textMaps>
+          </shapeMap>
+        </shapeMaps>
+      </diagramMap>
+    </diagramMaps>
+    <diagrams>
+      <diagram name="FeatureModelLanguageDiagram">
+        <connectors>
+          <connector name="RelationshipFeatureConnector">
+            <color variability="User" color="black" />
+            <dashStyle variability="User" dashStyle="solid"/>
+            <source>
+              <permittedShapes>
+                <shape>ISpySoft.FeatureModelLanguage.Designer.FeatureModelLanguageDiagram/Shapes/FeatureSetShape</shape>
+                <shape>ISpySoft.FeatureModelLanguage.Designer.FeatureModelLanguageDiagram/Shapes/FeatureShape</shape>
+                <shape>ISpySoft.FeatureModelLanguage.Designer.FeatureModelLanguageDiagram/Shapes/RootFeatureShape</shape>
+              </permittedShapes>
+            </source>
+            <target arrowStyle="None">
+              <permittedShapes>
+                <shape>ISpySoft.FeatureModelLanguage.Designer.FeatureModelLanguageDiagram/Shapes/FeatureShape</shape>
+              </permittedShapes>
+            </target>
+          </connector>
+          <connector name="RelationshipFeatureSetConnector">
+            <color variability="User" color="black" />
+            <dashStyle variability="Fixed" dashStyle="solid"/>
+            <source>
+              <permittedShapes>
+                <shape>ISpySoft.FeatureModelLanguage.Designer.FeatureModelLanguageDiagram/Shapes/FeatureShape</shape>
+                <shape>ISpySoft.FeatureModelLanguage.Designer.FeatureModelLanguageDiagram/Shapes/RootFeatureShape</shape>
+              </permittedShapes>
+            </source>
+            <target arrowStyle="None">
+              <permittedShapes>
+                <shape>ISpySoft.FeatureModelLanguage.Designer.FeatureModelLanguageDiagram/Shapes/FeatureSetShape</shape>
+              </permittedShapes>
+            </target>
+          </connector>
+        </connectors>
+        <shapes>
+          <imageShape name="FeatureSetShape" imageId="FeatureSetImage">
+            <decorators>
+              <shapeText name="Min" position="OuterMiddleRight" defaultTextId="MinDecorator"/>
+              <shapeText name="Max" position="OuterBottomRight"  defaultTextId="MaxDecorator"/>
+            </decorators>
+          </imageShape>
+          <geometryShape name="FeatureShape" geometry="Rectangle" initialHeight="0.5" initialWidth="0.7" >
+            <decorators>
+              <shapeText name="Name" position="InnerBottomCenter" defaultTextId="FeatureShapeNameDecorator"/>
+              <shapeIcon name="MandatoryIcon" position="InnerTopCenter" iconId="MandatoryIconFile"/>
+              <shapeIcon name="OptionalIcon" position="InnerTopCenter" iconId="OptionalIconFile"/>
+            </decorators>
+            <fillColor color="#AAAAFF" variability="Fixed"/>
+            <outlineColor color="black" variability="Fixed"/>
+          </geometryShape>
+          <geometryShape name="RootFeatureShape" geometry="Rectangle" initialHeight="0.5" initialWidth="0.7" >
+            <decorators>
+              <shapeText name="Name" position="Center" defaultTextId="RootFeatureShapeNameDecorator"/>
+            </decorators>
+            <fillColor color="#FFAAAA" variability="Fixed"/>
+            <outlineColor color="black" variability="Fixed"/>
+          </geometryShape>
+        </shapes>
+        <toolbox>
+          <items>
+            <shapeTool iconId="Feature" captionId="FeatureCaption" contextSensitiveHelpId="FeatureHelpId" order="1">
+              <shape>ISpySoft.FeatureModelLanguage.Designer.FeatureModelLanguageDiagram/Shapes/FeatureShape</shape>
+            </shapeTool>
+            <shapeTool iconId="FeatureSet" captionId="FeatureSetCaption" contextSensitiveHelpId="FeatureSetHelpId" order="2">
+              <shape>ISpySoft.FeatureModelLanguage.Designer.FeatureModelLanguageDiagram/Shapes/FeatureSetShape</shape>
+            </shapeTool>
+            <shapeTool iconId="RootFeature" captionId="RootFeatureCaption" contextSensitiveHelpId="RootFeatureHelpId" order="0">
+              <shape>ISpySoft.FeatureModelLanguage.Designer.FeatureModelLanguageDiagram/Shapes/RootFeatureShape</shape>
+            </shapeTool>
+            <connectorTool iconId="FeatureConnector" captionId="FeatureConnectorCaption" contextSensitiveHelpId="FeatureConnectorHelpId" order="3">
+              <connector>ISpySoft.FeatureModelLanguage.Designer.FeatureModelLanguageDiagram/Connectors/RelationshipFeatureConnector</connector>
+            </connectorTool>
+            <connectorTool iconId="FeatureSetConnector" captionId="FeatureSetConnectorCaption" contextSensitiveHelpId="FeatureSetConnectorHelpId" order="4">
+              <connector>ISpySoft.FeatureModelLanguage.Designer.FeatureModelLanguageDiagram/Connectors/RelationshipFeatureSetConnector</connector>
+            </connectorTool>
+          </items>
+        </toolbox>
+      </diagram>
+    </diagrams>
+  </notation>
+  <objectModels>
+    <objectModel name="ISpySoft.FeatureModelLanguage.DomainModel.FeatureModelLanguage" fileName="..\DomainModel\DomainModel.dsldm">
+      <model>ISpySoft.FeatureModelLanguage.DomainModel.FeatureModelLanguage</model>
+    </objectModel>
+  </objectModels>
+  <propertiesWindow>
+    <propertySets>
+    </propertySets>
+  </propertiesWindow>
+  <validationBehavior>
+    <contextMenuGroups>
+    </contextMenuGroups>
+  </validationBehavior>
+</designerDefinition>

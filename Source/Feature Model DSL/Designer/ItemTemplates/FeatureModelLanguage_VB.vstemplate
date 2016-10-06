@@ -1,0 +1,16 @@
+<!--DSL Tools Language Template-->
+<VSTemplate Version="2.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TemplateData>
+		<Name Package="{775af6f2-e57f-43a6-847b-c77893efd982}" ID="101"/>
+		<Description Package="{775af6f2-e57f-43a6-847b-c77893efd982}" ID="102"/>
+		<Icon Package="{775af6f2-e57f-43a6-847b-c77893efd982}" ID="401" />
+		<ProjectType>VisualBasic</ProjectType>
+		<SortOrder>360</SortOrder>
+		<DefaultName>FeatureModel.featuremodel</DefaultName>
+		<AppendDefaultFileExtension>true</AppendDefaultFileExtension>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem>template.featuremodel</ProjectItem>
+	</TemplateContent>
+</VSTemplate>
+

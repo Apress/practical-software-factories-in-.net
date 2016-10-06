@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title>Readme</title>
+	</head>
+	<body style="font-family: Verdana, Arial;">
+	<h1><img src="ISpySoft.png" border=0 align="absMiddle" /> Feature Modeling DSL</h1>
+	<h2>Installation</h2>
+	<p>For installation of the Feature Modeling DSL simply double-click on the
+	<b><i>FeatureModel</i></b><i><b>DSL.msi</b></i>,
+		which you can find in the 
+	current directory and follow the on-screen instructions.</p>
+	<h2>Getting started</h2>
+	<ul>
+		<li>Install the Feature Modeling DSL.</li>
+		<li>Open Visual Studio 2005.</li>
+		<li>Open any existing or create a new project or solution.</li>
+	</ul>
+	<ul>
+		<li>Right click on a project in 
+		the <i>Solution Explorer</i> and select <i>Add-&gt;New Item</i></li>
+		<li>Select <i>Visual C# Project Items</i> and select the <i>
+		FeatureModel</i> and fill in the name for the model you want to 
+		create.</li>
+	</ul>
+	<p><img border="0" src="NewFeatureDiagram.PNG" width="681" height="419"></p>
+	<ul>
+		<li>After adding the new item an empty document will open and in the 
+		Toolbox the concepts provided by the Feature Modeling DSL become 
+		available</li>
+	</ul>
+	<p><img border="0" src="Toolbox.jpg" width="182" height="175"></p>
+	<h2>Elements of a Feature Model</h2>
+	<p>In order to create your feature model simply drag the elements from the 
+	toolbox to the document. With a right click on the document surface you can 
+	check the correctness of the diagram&nbsp; Errors will be shown in the 
+	output window. Furthermore you can attach conditions, constraints and a 
+	description to each feature by double clicking on the feature in the feature 
+	model. Therefore we can create the requirements documents from the feature 
+	model. Remember, requirements consists of capability, constraint and 
+	condition.</p>
+	<p>In addition you can generate an xml description from the model by right 
+	click on the document surface. This xml description is intended to be the 
+	input for the feature model configurator. </p>
+	<p>The different elements are explained below.</p>
+	<h3>Root Feature</h3>
+	<p>In each feature model there is exactly one root feature that defines the 
+	root node of the feature model.</p>
+	<p><img border="0" src="RootFeature.jpg" width="104" height="67"></p>
+	<h3>Features</h3>
+	<p>As mentioned earlier with a double click on the feature you can add 
+	conditions, constraints and a descirption to each feature. In addition you 
+	can choose the type of feature as either mendatory, optional or feature set 
+	feature.</p>
+	<h4>Mandatory Feature</h4>
+	<p>Mandatory features are shown as features with a decorator that shows a 
+	filled circle. These features are common to all products in the product 
+	line.</p>
+	<p><img border="0" src="CommonFeature.jpg" width="79" height="54"></p>
+	<h4>Optional Feature</h4>
+	<p>Optional features are features that may or may not be part of a specific 
+	product. In the model these features are shown with a white circle 
+	decorator.</p>
+	<p><img border="0" src="OptionalFeature.jpg" width="79" height="56"></p>
+	<h4>Feature Set</h4>
+	<p>A feature set defines the minimum and maximum number of features that can 
+	to be selected within this group of features. In the example below zero to 
+	two features need to be selected for a valid model.</p>
+	<p><img border="0" src="FeatureSet.jpg" width="276" height="145"></p>
+	<h3>Connectors</h3>
+	<p>The table below shows the connections allowed for a feature model. This 
+	is a directed graph where the left hand row is the source and the right hand 
+	rows are the destinations for the connection.</p>
+	<table border="1" width="51%" id="table1">
+		<tr>
+			<td width="156">&nbsp;</td>
+			<td width="128">Root Feature</td>
+			<td width="117">Feature</td>
+			<td>Feature Set</td>
+		</tr>
+		<tr>
+			<td width="156">Root Feature</td>
+			<td width="128">N/A</td>
+			<td width="117">Feature Connector</td>
+			<td>Feature Set Connector</td>
+		</tr>
+		<tr>
+			<td width="156">Feature</td>
+			<td width="128">N/A</td>
+			<td width="117">Feature Connector</td>
+			<td>Feature Set Connector</td>
+		</tr>
+		<tr>
+			<td width="156">Feature Set</td>
+			<td width="128">N/A</td>
+			<td width="117">Feature Connector</td>
+			<td>N/A</td>
+		</tr>
+	</table>
+	<p>&nbsp;</p>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+This is the manifest for creating an installer for a Domain Specific Language. The text template files 
+(.dslddt) in this project use the information in this file to generate WiX files.  When the project is 
+built, these WiX files are compiled into an MSI package.  To deploy this package, copy all of the files 
+from the project output directory to the target machine, and run the setup.exe.  
+
+ 
+
+Some values in this file are copied from values in the designer definition file (.dsldd) for the DSL. 
+If the designer definition file could not be found, you will need to edit this file to provide correct 
+values for some attributes.  See the Error List for more specific information.
+-->
+<installerDefinition xmlns="http://schemas.microsoft.com/dsltools/dslsetup" 
+  productUrl="InsertProductUrlHere"
+  defaultDirectoryName="ISpySoft Case Study\Feature Model DSL"
+  productVersion="1.0.0.0"
+  requiresCSharp="true"
+  requiresVisualBasic="true"
+  productCode="2a9bd36f-72ec-4b53-97c9-18e4e2b05552"
+  upgradeCode="918cc432-ad91-4259-a73d-0d0a47d8e9c1">
+	<dslPackage name="FeatureModelDSL" project="Designer" assemblyPath="ISpySoft.FeatureModelLanguage.Designer.dll" registryRoot="Software\Microsoft\VisualStudio\8.0">
+		<fileExtensions>
+			<fileExtension name="FeatureModel" extension="featuremodel" descriptionKey="FileDescription" hasIcon="true" iconId="0"/>
+		</fileExtensions>
+		<supportingAssemblies>
+			<supportingAssembly name="DomainModel" project="DomainModel" assemblyPath="ISpySoft.FeatureModelLanguage.DomainModel.dll"/>
+		</supportingAssemblies>
+	</dslPackage>
+	<licenseAgreement filePath="Files\EULA.rtf" embed="true" />
+	<supportingFiles>
+		<supportingFile name="Readme" filePath="Files\Readme.htm" installShortcut="true" shortcutIconPath="Resources\ReadmeShortcut.ico" openAfterInstall="true" />
+		<supportingFile name="CommonFeature" filePath="Files\CommonFeature.jpg" openAfterInstall="false" />
+		<supportingFile name="FeatureSet" filePath="Files\FeatureSet.jpg" openAfterInstall="false" />
+		<supportingFile name="FeatureTypes" filePath="Files\FeatureTypes.jpg" openAfterInstall="false" />
+		<supportingFile name="ISpySoft" filePath="Files\ISpySoft.png" openAfterInstall="false" />
+		<supportingFile name="NewFeatureDiagram" filePath="Files\NewFeatureDiagram.png" openAfterInstall="false" />
+		<supportingFile name="NewFeatureModel" filePath="Files\NewFeatureModel.jpg" openAfterInstall="false" />
+		<supportingFile name="OptionalFeature" filePath="Files\OptionalFeature.jpg" openAfterInstall="false" />
+		<supportingFile name="RootFeature" filePath="Files\RootFeature.jpg" openAfterInstall="false" />
+		<supportingFile name="Toolbox" filePath="Files\Toolbox.jpg" openAfterInstall="false" />
+	</supportingFiles>
+	<vsItemTemplates>
+		<vsItemTemplate localeId="1033" targetDirectories="CSharp" templatePath="Files\FeatureModelItemTemplate_CS.zip"/>
+		<vsItemTemplate localeId="1033" targetDirectories="VisualBasic" templatePath="Files\FeatureModelItemTemplate_VB.zip"/>
+	</vsItemTemplates>
+  <!--<vsProjectTemplates>
+    <vsProjectTemplate localeId="1033" targetDirectories="CSharp" templatePath="Files\FeatureModelLanguage.zip"/>
+  </vsProjectTemplates>-->
+</installerDefinition>

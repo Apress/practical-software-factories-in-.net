@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F00E61BC-8DD3-4EF5-B5E7-561B1731EA6A}</ProjectGuid>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <OutputName>FeatureModelDSL</OutputName>
+    <LocalizedStringFile>Strings.wxl</LocalizedStringFile>
+    <SuppressAssemblies>True</SuppressAssemblies>
+    <VerboseOutput>True</VerboseOutput>
+    <SetupIniFile>settings.ini</SetupIniFile>
+    <OutputType>Library</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <AssemblyName>Setup</AssemblyName>
+    <RootNamespace>Setup</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>Configuration=Debug</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>Configuration=Release</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\DSLTools\v2.0\wix.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <None Include="Files\EULA.rtf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Files.dslddt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Files.wsx</LastGenOutput>
+    </None>
+    <Compile Include="Files.wsx">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Files.dslddt</DependentUpon>
+    </Compile>
+    <None Include="Files\FeatureModelItemTemplate_CS.zip" />
+    <None Include="Files\FeatureModelItemTemplate_VB.zip" />
+    <None Include="Files\Readme.htm" />
+    <Compile Include="Registry.wsx">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Registry.dslddt</DependentUpon>
+    </Compile>
+    <None Include="InstallerDefinition.dslsetup" />
+    <None Include="Resources\BannerBitmap.bmp" />
+    <None Include="Resources\Product.ico" />
+    <None Include="Resources\NewFldrBtn.bmp" />
+    <None Include="Resources\ReadmeShortcut.ico" />
+    <None Include="Resources\UpFldrBtn.bmp" />
+    <None Include="Registry.dslddt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Registry.wsx</LastGenOutput>
+    </None>
+    <SetupFiles Include="settings.ini" />
+    <None Include="Main.dslddt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Main.wsx</LastGenOutput>
+    </None>
+    <Compile Include="Main.wsx">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Main.dslddt</DependentUpon>
+    </Compile>
+    <None Include="Strings.wxl" />
+    <None Include="UI.dslddt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UI.wsx</LastGenOutput>
+    </None>
+    <Compile Include="UI.wsx">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UI.dslddt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Files\buildzips.bat" />
+    <None Include="Files\CommonFeature.jpg" />
+    <None Include="Files\FeatureModelItemTemplate_CS\template.featuremodel" />
+    <None Include="Files\FeatureModelItemTemplate_VB\template.featuremodel" />
+    <None Include="Files\FeatureSet.jpg" />
+    <None Include="Files\FeatureTypes.jpg" />
+    <None Include="Files\NewFeatureModel.JPG" />
+    <None Include="Files\OptionalFeature.jpg" />
+    <None Include="Files\RootFeature.jpg" />
+    <None Include="Files\Toolbox.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Files\FeatureModelItemTemplate_CS\FeatureModelItemTemplate_CS.vstemplate" />
+    <None Include="Files\FeatureModelItemTemplate_CS\__TemplateIcon.ico" />
+    <None Include="Files\FeatureModelItemTemplate_VB\FeatureModelItemTemplate_VB.vstemplate" />
+    <None Include="Files\FeatureModelItemTemplate_VB\__TemplateIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Files\ISpySoft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Files\NewFeatureDiagram.PNG" />
+  </ItemGroup>
+</Project>

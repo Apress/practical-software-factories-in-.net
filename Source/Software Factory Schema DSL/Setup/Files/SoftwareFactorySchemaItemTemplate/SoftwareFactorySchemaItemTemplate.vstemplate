@@ -1,0 +1,16 @@
+<VSTemplate Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Software Factory Schema Project</Name>
+    <Description>Creates a Software Factory Schema</Description>
+    <Icon>__TemplateIcon.ico</Icon>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>1000</SortOrder>
+    <DefaultName>SoftwareFactorySchema.sfschema</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.sfschema">SoftwareFactorySchema.sfschema</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.t4">SoftwareFactorySchemaBrowser.t4</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.xml">SoftwareFactorySchemaBrowser.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.xsl">SoftwareFactorySchemaBrowser.xsl</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

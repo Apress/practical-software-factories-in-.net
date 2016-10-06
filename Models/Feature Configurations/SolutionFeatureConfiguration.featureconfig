@@ -1,0 +1,69 @@
+<RootFeature name="Investigation &amp; Case Management">
+  <Feature name="Security" kind="Mandatory" configuration="Included">
+    <Feature name="User Account" kind="Mandatory" configuration="Included" />
+    <Feature name="User Role" kind="Mandatory" configuration="Included" />
+    <Feature name="Access Rights" kind="Mandatory" configuration="Included" />
+    <Feature name="Audit Log" kind="Optional" configuration="Unspecified" />
+    <Feature name="Login" kind="Mandatory" configuration="Included" />
+    <Feature name="Encryption" kind="Mandatory" configuration="Included">
+      <FeatureSet min="0" max="2">
+        <Feature name="Transport" kind="FeatureSetFeature" configuration="Unspecified" />
+        <Feature name="Storage" kind="FeatureSetFeature" configuration="Unspecified" />
+      </FeatureSet>
+    </Feature>
+  </Feature>
+  <Feature name="Geo Features" kind="Optional" configuration="Unspecified">
+    <Feature name="Maps" kind="Optional" configuration="Unspecified" />
+    <Feature name="GPS Connectivity" kind="Optional" configuration="Unspecified" />
+  </Feature>
+  <Feature name="Administration" kind="Mandatory" configuration="Included">
+    <Feature name="Archiving" kind="Mandatory" configuration="Included" />
+    <Feature name="User Administration" kind="Mandatory" configuration="Included" />
+    <Feature name="Purging" kind="Mandatory" configuration="Included" />
+  </Feature>
+  <Feature name="Architectural Features" kind="Mandatory" configuration="Included">
+    <Feature name="Platforms" kind="Mandatory" configuration="Included">
+      <Feature name="Win32" kind="Mandatory" configuration="Included" />
+      <Feature name="WinCE" kind="Optional" configuration="Unspecified" />
+    </Feature>
+    <Feature name="Data Repository" kind="Mandatory" configuration="Included">
+      <FeatureSet min="0" max="N">
+        <Feature name="Image" kind="FeatureSetFeature" configuration="Unspecified" />
+        <Feature name="Video" kind="FeatureSetFeature" configuration="Unspecified" />
+        <Feature name="Audio" kind="FeatureSetFeature" configuration="Unspecified" />
+        <Feature name="Link" kind="FeatureSetFeature" configuration="Unspecified" />
+        <Feature name="Text" kind="FeatureSetFeature" configuration="Unspecified" />
+      </FeatureSet>
+    </Feature>
+    <Feature name="Connectivity" kind="Mandatory" configuration="Included">
+      <Feature name="Online" kind="Mandatory" configuration="Included" />
+      <Feature name="Offline" kind="Optional" configuration="Unspecified" />
+      <Feature name="Caching" kind="Mandatory" configuration="Included" />
+      <FeatureSet min="1" max="N">
+        <Feature name="HTTP" kind="FeatureSetFeature" configuration="Unspecified" />
+        <Feature name="TCP" kind="FeatureSetFeature" configuration="Unspecified" />
+        <Feature name="SOAP" kind="FeatureSetFeature" configuration="Unspecified" />
+      </FeatureSet>
+    </Feature>
+    <Feature name="Customizable Workflows" kind="Mandatory" configuration="Included">
+      <FeatureSet min="3" max="3">
+        <Feature name="Action" kind="FeatureSetFeature" configuration="Unspecified" />
+        <Feature name="Event" kind="FeatureSetFeature" configuration="Unspecified" />
+        <Feature name="Logic" kind="FeatureSetFeature" configuration="Unspecified" />
+      </FeatureSet>
+    </Feature>
+  </Feature>
+  <Feature name="Power User Features" kind="Mandatory" configuration="Included">
+    <Feature name="Search" kind="Mandatory" configuration="Included" />
+    <Feature name="Printing" kind="Mandatory" configuration="Included" />
+    <Feature name="Bookmarks" kind="Mandatory" configuration="Included" />
+    <Feature name="Mailing" kind="Mandatory" configuration="Included">
+      <FeatureSet min="1" max="N">
+        <Feature name="Email" kind="FeatureSetFeature" configuration="Unspecified" />
+        <Feature name="Letter" kind="FeatureSetFeature" configuration="Unspecified" />
+      </FeatureSet>
+      <Feature name="Individual Mails" kind="Mandatory" configuration="Included" />
+      <Feature name="Mass Mails" kind="Mandatory" configuration="Included" />
+    </Feature>
+  </Feature>
+</RootFeature>

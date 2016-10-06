@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftwareFactorySchema", "SoftwareFactorySchema.csproj", "{72308D6E-3E9B-43FD-9C8C-4A4AAEBD86EB}"
+EndProject
+Global
+	GlobalSection(TextTemplating) = postSolution
+		TextTemplating = 1
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72308D6E-3E9B-43FD-9C8C-4A4AAEBD86EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72308D6E-3E9B-43FD-9C8C-4A4AAEBD86EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72308D6E-3E9B-43FD-9C8C-4A4AAEBD86EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72308D6E-3E9B-43FD-9C8C-4A4AAEBD86EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

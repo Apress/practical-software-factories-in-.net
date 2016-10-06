@@ -1,0 +1,47 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainModel", "DomainModel\DomainModel.csproj", "{B5BB95DD-457D-4CF1-9BA3-8B45794C2EA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Designer", "Designer\Designer.csproj", "{5D73AA7B-CDCC-4DA9-915C-1B806C97EC5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Setup", "Setup\Setup.csproj", "{F00E61BC-8DD3-4EF5-B5E7-561B1731EA6A}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs01.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Designer\\Designer.csproj
+		SccProjectName1 = Designer
+		SccLocalPath1 = Designer
+		SccProjectUniqueName2 = DomainModel\\DomainModel.csproj
+		SccProjectName2 = DomainModel
+		SccLocalPath2 = DomainModel
+		SccProjectUniqueName3 = Setup\\Setup.csproj
+		SccProjectName3 = Setup
+		SccLocalPath3 = Setup
+	EndGlobalSection
+	GlobalSection(TextTemplating) = postSolution
+		TextTemplating = 1
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5BB95DD-457D-4CF1-9BA3-8B45794C2EA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5BB95DD-457D-4CF1-9BA3-8B45794C2EA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5BB95DD-457D-4CF1-9BA3-8B45794C2EA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5BB95DD-457D-4CF1-9BA3-8B45794C2EA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D73AA7B-CDCC-4DA9-915C-1B806C97EC5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D73AA7B-CDCC-4DA9-915C-1B806C97EC5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D73AA7B-CDCC-4DA9-915C-1B806C97EC5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D73AA7B-CDCC-4DA9-915C-1B806C97EC5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F00E61BC-8DD3-4EF5-B5E7-561B1731EA6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F00E61BC-8DD3-4EF5-B5E7-561B1731EA6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

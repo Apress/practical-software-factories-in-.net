@@ -1,0 +1,22 @@
+<#
+/***************************************************************************
+         Copyright (c) Microsoft Corporation, All rights reserved.             
+    This code sample is provided "AS IS" without warranty of any kind, 
+    it is not recommended for use in a production environment.
+***************************************************************************/
+#>
+<#@ definition processor="DDDirectiveProcessor" requires="fileName='..\\Designer.dsldd'" #>
+
+// do not use #pragma once - used by ctc compiler
+#ifndef __GENERATEDCMD_H_
+#define __GENERATEDCMD_H_
+<#@ include file="Designer\CtcComponents\GeneratedCmd.dslddi" #>
+///////////////////////////////////////////////////////////////////////////////
+// CTC guids - MUST be kept in sync with GeneratedCmd.cs
+
+#define guidPkg			{ 0x775af6f2, 0xe57f, 0x43a6, { 0x84, 0x7b, 0xc7, 0x78, 0x93, 0xef, 0xd9, 0x82 } }
+#define guidCmdSet		{ 0xc93ab5fa, 0x3aff, 0x457d, { 0xb1, 0x66, 0xac, 0xa3, 0xc2, 0x91, 0xad, 0xad } }
+#define guidMenu		{ 0x2f747dc0, 0xbb5b, 0x4c7f, { 0x89, 0x97, 0x90, 0x62, 0x72, 0x4c, 0x51, 0x18 } }
+#define guidEditor		{ 0xa481ee5a, 0x7a23, 0x4057, { 0x86, 0x21, 0x2b, 0x02, 0xa3, 0xf9, 0xcb, 0xbf } }
+
+#endif // __GENERATEDCMD_H_

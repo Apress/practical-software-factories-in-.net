@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="SoftwareFactorySchemaBrowser.xsl"?>
+<SFSchema>
+	<ViewPoints>
+			<ViewPoint ID="bd812123-3dd6-4feb-9c34-a912ddaf34ff" name="Physical  Data Model VP">			
+							<Stakeholders>
+									<Stakeholder name="DBA"/>
+										<Stakeholder name="Developer"/>
+								</Stakeholders>
+											<Artifact ID="fbd86af7-51e3-4852-9e68-86e38a293dfc"/>
+											<Artifact ID="e3daacfa-5d6c-4140-a8d7-2567e4c367d1"/>
+											<Activity ID="e1f78ebd-6fa8-4067-9c7a-16a996fe7a97">
+															<Uses>
+													<Artifact ID="fbd86af7-51e3-4852-9e68-86e38a293dfc"/>
+												</Uses>
+																<Uses>
+													<Artifact ID="e3daacfa-5d6c-4140-a8d7-2567e4c367d1"/>
+												</Uses>
+																<Writes>
+													<Artifact ID="52e55ebb-5c38-4612-a942-316f0bca6b34"/>
+												</Writes>
+												</Activity>
+											<Artifact ID="52e55ebb-5c38-4612-a942-316f0bca6b34"/>
+						</ViewPoint>
+					<ViewPoint ID="8be59274-97b2-4bc9-800c-14fc6fbfbe26" name="Solution Structure VP">			
+							<Stakeholders>
+									<Stakeholder name="Developer"/>
+								</Stakeholders>
+											<Artifact ID="3cb16de7-de9b-4568-ae00-e004dc03447a"/>
+											<Artifact ID="9da275b4-5334-466d-adf9-253602071e32"/>
+											<Activity ID="d28e7eb2-cc24-4c0a-9bc1-6a908124c141">
+															<Uses>
+													<Artifact ID="3cb16de7-de9b-4568-ae00-e004dc03447a"/>
+												</Uses>
+																<Writes>
+													<Artifact ID="9da275b4-5334-466d-adf9-253602071e32"/>
+												</Writes>
+												</Activity>
+											<Activity ID="7ba26456-1f99-4692-9eb9-d15906e09800">
+															<Uses>
+													<Artifact ID="3cb16de7-de9b-4568-ae00-e004dc03447a"/>
+												</Uses>
+																<Writes>
+													<Artifact ID="9da275b4-5334-466d-adf9-253602071e32"/>
+												</Writes>
+												</Activity>
+											<Activity ID="6e1f2b39-01fd-45cc-a6b6-7ee91ad7e210">
+															<Uses>
+													<Artifact ID="3cb16de7-de9b-4568-ae00-e004dc03447a"/>
+												</Uses>
+																<Writes>
+													<Artifact ID="9da275b4-5334-466d-adf9-253602071e32"/>
+												</Writes>
+												</Activity>
+						</ViewPoint>
+					<ViewPoint ID="f40cc5c2-1baa-4786-a878-f1bc60df10d7" name="Smart Client - User Experience VP">			
+							<Stakeholders>
+									<Stakeholder name="UI Designer"/>
+										<Stakeholder name="Developer"/>
+								</Stakeholders>
+											<Artifact ID="459dcfdb-a46b-4d23-85c1-036f39cc0e2a"/>
+											<Artifact ID="1b662635-2362-43b9-8b9f-7cf20b450b92"/>
+											<Activity ID="b87ce50d-7b60-42b1-b806-0ed9f59e96f7">
+															<Uses>
+													<Artifact ID="459dcfdb-a46b-4d23-85c1-036f39cc0e2a"/>
+												</Uses>
+																<Writes>
+													<Artifact ID="1b662635-2362-43b9-8b9f-7cf20b450b92"/>
+												</Writes>
+												</Activity>
+						</ViewPoint>
+					<ViewPoint ID="a848f15f-8445-4541-b8a8-68bc12e5f589" name="Service VP">			
+							<Stakeholders>
+									<Stakeholder name="Architect"/>
+										<Stakeholder name="Developer"/>
+										<Stakeholder name="Software Engineer"/>
+								</Stakeholders>
+											<Activity ID="fa113dea-d7e3-464c-8afc-3bc178034e91">
+															<Writes>
+													<Artifact ID="64edcf96-4b4a-4ae0-9199-f01555889e5a"/>
+												</Writes>
+												</Activity>
+											<Activity ID="aa3f6224-9bf0-49f2-9dcf-e417fe975dc6">
+															<Writes>
+													<Artifact ID="93961cb8-5743-4d96-ac13-453ae71737c8"/>
+												</Writes>
+												</Activity>
+											<Artifact ID="93961cb8-5743-4d96-ac13-453ae71737c8"/>
+											<Artifact ID="64edcf96-4b4a-4ae0-9199-f01555889e5a"/>
+											<Activity ID="7d90a2e6-fc85-4434-b5ff-1299b6e0a0c5">
+															<Writes>
+													<Artifact ID="8c3bbcc9-40be-49b1-a8d4-14e245f6a66b"/>
+												</Writes>
+												</Activity>
+											<Artifact ID="8c3bbcc9-40be-49b1-a8d4-14e245f6a66b"/>
+											<Activity ID="15df7d59-5b9f-4699-a5de-3c37e7e110b2">
+															<Writes>
+													<Artifact ID="8c3bbcc9-40be-49b1-a8d4-14e245f6a66b"/>
+												</Writes>
+												</Activity>
+						</ViewPoint>
+					<ViewPoint ID="c3b954a7-f952-4966-a632-f4379d6699dd" name="Requirements VP">			
+							<Stakeholders>
+									<Stakeholder name="Project Manager"/>
+										<Stakeholder name="Architect"/>
+										<Stakeholder name="Business Analyst"/>
+								</Stakeholders>
+											<Activity ID="b8b16a07-a31f-4470-802a-8fd165bcbb9f">
+															<Uses>
+													<Artifact ID="6860b48b-9bfe-41a3-bf93-4d634c952d60"/>
+												</Uses>
+																<Uses>
+													<Artifact ID="7d364a54-55bb-44aa-ae14-17a36bd5ce51"/>
+												</Uses>
+																<Uses>
+													<Artifact ID="bc2d0d8d-b142-467b-b4c2-9e58418612e2"/>
+												</Uses>
+																<Writes>
+													<Artifact ID="6694df21-e783-4af8-aa4b-e55be447bbc5"/>
+												</Writes>
+																<Writes>
+													<Artifact ID="b67b7bd4-76c9-43bc-af08-dc70cfdf8c9d"/>
+												</Writes>
+																<Writes>
+													<Artifact ID="a62138dc-361c-4bd0-9aab-b2bcf9db7bad"/>
+												</Writes>
+																<Writes>
+													<Artifact ID="ade5a003-acb9-4c15-9969-af01022fb20e"/>
+												</Writes>
+												</Activity>
+											<Artifact ID="6694df21-e783-4af8-aa4b-e55be447bbc5"/>
+											<Artifact ID="b67b7bd4-76c9-43bc-af08-dc70cfdf8c9d"/>
+											<Artifact ID="a62138dc-361c-4bd0-9aab-b2bcf9db7bad"/>
+											<Artifact ID="bc2d0d8d-b142-467b-b4c2-9e58418612e2"/>
+											<Artifact ID="7d364a54-55bb-44aa-ae14-17a36bd5ce51"/>
+											<Artifact ID="6860b48b-9bfe-41a3-bf93-4d634c952d60"/>
+											<Artifact ID="ade5a003-acb9-4c15-9969-af01022fb20e"/>
+						</ViewPoint>
+					<ViewPoint ID="33e1a3b2-4440-48f7-b5f6-01ae943b3bd9" name="Distributed Systems - Deployment VP">			
+							<Stakeholders>
+									<Stakeholder name="Architect"/>
+										<Stakeholder name="Developer"/>
+										<Stakeholder name="Administrator"/>
+								</Stakeholders>
+											<Artifact ID="6c8982fa-31c4-4e1b-b756-7929b07f5720"/>
+											<Artifact ID="8fc9bcec-294e-4190-bee5-3acd58863e0b"/>
+											<Activity ID="ca6f08c5-ba65-4028-9d1e-2e1fcac295a8">
+															<Writes>
+													<Artifact ID="6c8982fa-31c4-4e1b-b756-7929b07f5720"/>
+												</Writes>
+												</Activity>
+											<Activity ID="a3abfa7f-8ed5-4a65-86c4-cdc1560d630e">
+															<Uses>
+													<Artifact ID="1fd4657f-1fea-4712-98bc-4c204634d363"/>
+												</Uses>
+																<Writes>
+													<Artifact ID="8fc9bcec-294e-4190-bee5-3acd58863e0b"/>
+												</Writes>
+												</Activity>
+											<Artifact ID="1fd4657f-1fea-4712-98bc-4c204634d363"/>
+						</ViewPoint>
+					<ViewPoint ID="2d14635c-d032-4b9b-a827-db522b6b3fa5" name="Unit Test VP">			
+							<Stakeholders>
+									<Stakeholder name="Developer"/>
+										<Stakeholder name="Tester"/>
+								</Stakeholders>
+											<Artifact ID="cfe1915f-432f-4984-a2b6-5a3342c155a7"/>
+											<Artifact ID="6f7d7713-2525-4b0b-8240-8cdd4aa526b8"/>
+											<Activity ID="874cc142-bb5d-484a-8569-983870a541c4">
+															<Uses>
+													<Artifact ID="cfe1915f-432f-4984-a2b6-5a3342c155a7"/>
+												</Uses>
+																<Uses>
+													<Artifact ID="808ae093-1ef1-40f2-8bfe-4f2c668e05b4"/>
+												</Uses>
+																<Writes>
+													<Artifact ID="6f7d7713-2525-4b0b-8240-8cdd4aa526b8"/>
+												</Writes>
+												</Activity>
+											<Artifact ID="808ae093-1ef1-40f2-8bfe-4f2c668e05b4"/>
+						</ViewPoint>
+					<ViewPoint ID="fe03351a-85e0-4a94-9e84-32170f9b6007" name="Distributed Systems - Application VP">			
+							<Stakeholders>
+									<Stakeholder name="Architect"/>
+										<Stakeholder name="Developer"/>
+										<Stakeholder name="Software Engineer"/>
+								</Stakeholders>
+											<Activity ID="2e77859c-bfa1-437c-b712-8ef7ba454a9c">
+															<Uses>
+													<Artifact ID="012d4fac-542c-4795-ab22-ced34de118d4"/>
+												</Uses>
+																<Writes>
+													<Artifact ID="157ae9c4-c73e-43c5-9267-645f5a4dddd9"/>
+												</Writes>
+												</Activity>
+											<Artifact ID="157ae9c4-c73e-43c5-9267-645f5a4dddd9"/>
+											<Artifact ID="012d4fac-542c-4795-ab22-ced34de118d4"/>
+						</ViewPoint>
+					<ViewPoint ID="ebf10d8d-dac9-426c-9310-4c561a986a1c" name="Business Workflow VP">			
+							<Stakeholders>
+									<Stakeholder name="Business Analyst"/>
+										<Stakeholder name="Developer"/>
+								</Stakeholders>
+											<Activity ID="09c11678-e038-40ef-8230-658b251644f2">
+															<Uses>
+													<Artifact ID="aa3db2d7-4e4f-4bb2-b782-c4686b7e3929"/>
+												</Uses>
+																<Writes>
+													<Artifact ID="f012e93c-f6ec-48ce-b527-fe014fe4da64"/>
+												</Writes>
+												</Activity>
+											<Artifact ID="f012e93c-f6ec-48ce-b527-fe014fe4da64"/>
+											<Artifact ID="aa3db2d7-4e4f-4bb2-b782-c4686b7e3929"/>
+						</ViewPoint>
+					<ViewPoint ID="871ae55d-da56-4993-a02d-496812d7f148" name="Data Entity VP">			
+							<Stakeholders>
+									<Stakeholder name="Architect"/>
+										<Stakeholder name="Developer"/>
+										<Stakeholder name="DBA"/>
+								</Stakeholders>
+											<Activity ID="9424a6d2-202d-4ba8-bebc-1cc645e22cdc">
+															<Uses>
+													<Artifact ID="bdec5860-01b4-437b-bcf1-fa1d53ee766f"/>
+												</Uses>
+																<Uses>
+													<Artifact ID="179947e9-cffd-49b4-8bf3-59e7bb7abc99"/>
+												</Uses>
+																<Uses>
+													<Artifact ID="7bf6ef12-f35f-4973-a4e5-4d223ee14d81"/>
+												</Uses>
+																<Writes>
+													<Artifact ID="001d9253-b3de-40b3-a5b6-5961c130af4a"/>
+												</Writes>
+												</Activity>
+											<Artifact ID="bdec5860-01b4-437b-bcf1-fa1d53ee766f"/>
+											<Artifact ID="179947e9-cffd-49b4-8bf3-59e7bb7abc99"/>
+											<Artifact ID="001d9253-b3de-40b3-a5b6-5961c130af4a"/>
+											<Artifact ID="7bf6ef12-f35f-4973-a4e5-4d223ee14d81"/>
+						</ViewPoint>
+					<ViewPoint ID="2fd837f4-7f66-4dcf-8b1b-4cd53643d7a2" name="Component Structure VP">			
+							<Stakeholders>
+									<Stakeholder name="Architect"/>
+										<Stakeholder name="Software Engineer"/>
+										<Stakeholder name="Developer"/>
+								</Stakeholders>
+											<Activity ID="06c4a267-912a-4d04-9dc1-84b12be4458a">
+															<Uses>
+													<Artifact ID="01b1b30d-f428-40d1-84c7-f15e8403ca3a"/>
+												</Uses>
+																<Writes>
+													<Artifact ID="450866e3-b546-4550-af22-ec43543c18f7"/>
+												</Writes>
+												</Activity>
+											<Artifact ID="450866e3-b546-4550-af22-ec43543c18f7"/>
+											<Artifact ID="01b1b30d-f428-40d1-84c7-f15e8403ca3a"/>
+						</ViewPoint>
+					<ViewPoint ID="b2ed2cb0-34a1-4ae8-97e1-785a9df7f45e" name="Smart Client Architecture Viewpoint">			
+							<Stakeholders>
+									<Stakeholder name="Architect"/>
+										<Stakeholder name="Developer"/>
+										<Stakeholder name="Software Engineer"/>
+								</Stakeholders>
+											<Activity ID="e5ebc7d6-52a3-4f63-baef-8de6aeec11bd">
+															<Uses>
+													<Artifact ID="20600fef-7fab-4d83-99f4-3a6cf2a51a9a"/>
+												</Uses>
+																<Writes>
+													<Artifact ID="a9073206-f81a-4b33-acbb-1e9af252691d"/>
+												</Writes>
+												</Activity>
+											<Artifact ID="a9073206-f81a-4b33-acbb-1e9af252691d"/>
+											<Activity ID="87848187-7c82-4083-927b-b5aa3edd0906">
+															<Uses>
+													<Artifact ID="98064945-f998-497e-8cb3-630ed8026034"/>
+												</Uses>
+																<Writes>
+													<Artifact ID="a9073206-f81a-4b33-acbb-1e9af252691d"/>
+												</Writes>
+												</Activity>
+											<Artifact ID="083e5def-92d5-479b-9a9c-02a5e9d464ee"/>
+											<Activity ID="19017863-36fb-4994-b4f8-49d523e03448">
+															<Uses>
+													<Artifact ID="b469e702-1776-4924-a1d3-7ddad1b4f283"/>
+												</Uses>
+																<Uses>
+													<Artifact ID="ca3d50ed-b3ac-47ae-8c4d-b5519584c9c1"/>
+												</Uses>
+																<Writes>
+													<Artifact ID="083e5def-92d5-479b-9a9c-02a5e9d464ee"/>
+												</Writes>
+												</Activity>
+											<Artifact ID="b469e702-1776-4924-a1d3-7ddad1b4f283"/>
+											<Artifact ID="20600fef-7fab-4d83-99f4-3a6cf2a51a9a"/>
+											<Artifact ID="98064945-f998-497e-8cb3-630ed8026034"/>
+											<Artifact ID="ca3d50ed-b3ac-47ae-8c4d-b5519584c9c1"/>
+						</ViewPoint>
+			</ViewPoints>
+	<Stakeholders>
+		
+			<Stakeholder name="Architect"/>			
+					
+			<Stakeholder name="Software Engineer"/>			
+					
+			<Stakeholder name="Developer"/>			
+					
+			<Stakeholder name="Business Analyst"/>			
+					
+			<Stakeholder name="DBA"/>			
+					
+			<Stakeholder name="UI Designer"/>			
+					
+			<Stakeholder name="Tester"/>			
+					
+			<Stakeholder name="Administrator"/>			
+					
+			<Stakeholder name="Project Manager"/>			
+					
+	</Stakeholders>
+	<Activities>
+		
+			<Activity ID="b8b16a07-a31f-4470-802a-8fd165bcbb9f" name="Perform Requirements Analysis"/>			
+					
+			<Activity ID="ca6f08c5-ba65-4028-9d1e-2e1fcac295a8" name="Create Deployment Report"/>			
+					
+			<Activity ID="19017863-36fb-4994-b4f8-49d523e03448" name="Create Service Proxy"/>			
+					
+			<Activity ID="06c4a267-912a-4d04-9dc1-84b12be4458a" name="Design Logical Component Structure"/>			
+					
+			<Activity ID="a3abfa7f-8ed5-4a65-86c4-cdc1560d630e" name="Create Setup"/>			
+					
+			<Activity ID="15df7d59-5b9f-4699-a5de-3c37e7e110b2" name="Integrate Workflows"/>			
+					
+			<Activity ID="b87ce50d-7b60-42b1-b806-0ed9f59e96f7" name="Design User Interface"/>			
+					
+			<Activity ID="d28e7eb2-cc24-4c0a-9bc1-6a908124c141" name="Unfold Service"/>			
+					
+			<Activity ID="aa3f6224-9bf0-49f2-9dcf-e417fe975dc6" name="Create Translators"/>			
+					
+			<Activity ID="e5ebc7d6-52a3-4f63-baef-8de6aeec11bd" name="Implement Module"/>			
+					
+			<Activity ID="7ba26456-1f99-4692-9eb9-d15906e09800" name="Unfold Smart Client"/>			
+					
+			<Activity ID="7d90a2e6-fc85-4434-b5ff-1299b6e0a0c5" name="Expose Business Logic"/>			
+					
+			<Activity ID="e1f78ebd-6fa8-4067-9c7a-16a996fe7a97" name="Extend DB Schema"/>			
+					
+			<Activity ID="874cc142-bb5d-484a-8569-983870a541c4" name="Run Unit Tests"/>			
+					
+			<Activity ID="2e77859c-bfa1-437c-b712-8ef7ba454a9c" name="Define Services"/>			
+					
+			<Activity ID="09c11678-e038-40ef-8230-658b251644f2" name="Create Workflows"/>			
+					
+			<Activity ID="fa113dea-d7e3-464c-8afc-3bc178034e91" name="Define Service Interface"/>			
+					
+			<Activity ID="6e1f2b39-01fd-45cc-a6b6-7ee91ad7e210" name="Unfold Solution"/>			
+					
+			<Activity ID="87848187-7c82-4083-927b-b5aa3edd0906" name="Implement UI"/>			
+					
+			<Activity ID="9424a6d2-202d-4ba8-bebc-1cc645e22cdc" name="Extend Data Entity Model"/>			
+					
+	</Activities>
+	<Artifacts>
+		
+			<Artifact ID="6f7d7713-2525-4b0b-8240-8cdd4aa526b8" type="WorkProduct" name="Test Report"/>			
+					
+			<Artifact ID="8fc9bcec-294e-4190-bee5-3acd58863e0b" type="WorkProduct" name="Click-once Setup"/>			
+					
+			<Artifact ID="01b1b30d-f428-40d1-84c7-f15e8403ca3a" type="Asset" name="Design Specification"/>			
+					
+			<Artifact ID="aa3db2d7-4e4f-4bb2-b782-c4686b7e3929" type="Tool" name="Workflow Designer"/>			
+					
+			<Artifact ID="3cb16de7-de9b-4568-ae00-e004dc03447a" type="Tool" name="Visual Studio 2005"/>			
+					
+			<Artifact ID="a9073206-f81a-4b33-acbb-1e9af252691d" type="WorkProduct" name="Module"/>			
+					
+			<Artifact ID="e3daacfa-5d6c-4140-a8d7-2567e4c367d1" type="Tool" name="SQL Management Studio"/>			
+					
+			<Artifact ID="52e55ebb-5c38-4612-a942-316f0bca6b34" type="WorkProduct" name="DB Schema"/>			
+					
+			<Artifact ID="64edcf96-4b4a-4ae0-9199-f01555889e5a" type="WorkProduct" name="Service Interface"/>			
+					
+			<Artifact ID="98064945-f998-497e-8cb3-630ed8026034" type="Asset" name="Composite UI App Block"/>			
+					
+			<Artifact ID="001d9253-b3de-40b3-a5b6-5961c130af4a" type="WorkProduct" name="Data Entity Model"/>			
+					
+			<Artifact ID="a62138dc-361c-4bd0-9aab-b2bcf9db7bad" type="WorkProduct" name="Solution Feature Configuration"/>			
+					
+			<Artifact ID="808ae093-1ef1-40f2-8bfe-4f2c668e05b4" type="Asset" name="Unit Tests"/>			
+					
+			<Artifact ID="93961cb8-5743-4d96-ac13-453ae71737c8" type="WorkProduct" name="Translators"/>			
+					
+			<Artifact ID="1b662635-2362-43b9-8b9f-7cf20b450b92" type="WorkProduct" name=" UI Prototype"/>			
+					
+			<Artifact ID="6860b48b-9bfe-41a3-bf93-4d634c952d60" type="Asset" name="Requirements"/>			
+					
+			<Artifact ID="6c8982fa-31c4-4e1b-b756-7929b07f5720" type="WorkProduct" name="Deployment Report"/>			
+					
+			<Artifact ID="7d364a54-55bb-44aa-ae14-17a36bd5ce51" type="Asset" name="Solution Feature Model"/>			
+					
+			<Artifact ID="7bf6ef12-f35f-4973-a4e5-4d223ee14d81" type="Asset" name="NHibernate"/>			
+					
+			<Artifact ID="450866e3-b546-4550-af22-ec43543c18f7" type="WorkProduct" name="Component Structure"/>			
+					
+			<Artifact ID="012d4fac-542c-4795-ab22-ced34de118d4" type="Tool" name="Application Designer"/>			
+					
+			<Artifact ID="f012e93c-f6ec-48ce-b527-fe014fe4da64" type="WorkProduct" name="Workflows"/>			
+					
+			<Artifact ID="cfe1915f-432f-4984-a2b6-5a3342c155a7" type="Tool" name="NUnit"/>			
+					
+			<Artifact ID="b67b7bd4-76c9-43bc-af08-dc70cfdf8c9d" type="WorkProduct" name="Problem Feature Configuration"/>			
+					
+			<Artifact ID="179947e9-cffd-49b4-8bf3-59e7bb7abc99" type="Tool" name="Class Designer"/>			
+					
+			<Artifact ID="b469e702-1776-4924-a1d3-7ddad1b4f283" type="Tool" name="Smart Web Reference Recipe"/>			
+					
+			<Artifact ID="ca3d50ed-b3ac-47ae-8c4d-b5519584c9c1" type="Asset" name="Smart Client Software Factory"/>			
+					
+			<Artifact ID="bdec5860-01b4-437b-bcf1-fa1d53ee766f" type="Asset" name="Data Entity Model Prototype"/>			
+					
+			<Artifact ID="9da275b4-5334-466d-adf9-253602071e32" type="WorkProduct" name="VS Solution"/>			
+					
+			<Artifact ID="8c3bbcc9-40be-49b1-a8d4-14e245f6a66b" type="WorkProduct" name="Service"/>			
+					
+			<Artifact ID="20600fef-7fab-4d83-99f4-3a6cf2a51a9a" type="Tool" name="Module Recipe"/>			
+					
+			<Artifact ID="bc2d0d8d-b142-467b-b4c2-9e58418612e2" type="Tool" name="Problem Feature Model"/>			
+					
+			<Artifact ID="1fd4657f-1fea-4712-98bc-4c204634d363" type="Asset" name="Bootstrapper"/>			
+					
+			<Artifact ID="fbd86af7-51e3-4852-9e68-86e38a293dfc" type="Asset" name="DB Schema Prototype"/>			
+					
+			<Artifact ID="083e5def-92d5-479b-9a9c-02a5e9d464ee" type="WorkProduct" name="Service Proxy"/>			
+					
+			<Artifact ID="6694df21-e783-4af8-aa4b-e55be447bbc5" type="WorkProduct" name="Problem Statements"/>			
+					
+			<Artifact ID="459dcfdb-a46b-4d23-85c1-036f39cc0e2a" type="Tool" name="WinForms Designer"/>			
+					
+			<Artifact ID="157ae9c4-c73e-43c5-9267-645f5a4dddd9" type="WorkProduct" name="Application Diagram"/>			
+					
+			<Artifact ID="ade5a003-acb9-4c15-9969-af01022fb20e" type="WorkProduct" name="Application-specific Requirements"/>			
+					
+	</Artifacts>
+
+	<Mappings>	
+	
+				<Mapping  ID="4a230b5a-9919-48e3-a1d2-3ff3cbb2f95d" name="O/R Mapping" source="871ae55d-da56-4993-a02d-496812d7f148" target="bd812123-3dd6-4feb-9c34-a912ddaf34ff" bidirectional="false">
+					<Description><![CDATA[]]></Description>
+				</Mapping>
+				<Mapping  ID="81a52aec-df23-4dc9-8cb5-eb3296ee91d9" name="Translate Data" source="871ae55d-da56-4993-a02d-496812d7f148" target="a848f15f-8445-4541-b8a8-68bc12e5f589" bidirectional="false">
+					<Description><![CDATA[]]></Description>
+				</Mapping>
+				<Mapping  ID="6879b861-addb-417a-b0ee-489ba9cca50a" name="Service Mapping" source="fe03351a-85e0-4a94-9e84-32170f9b6007" target="a848f15f-8445-4541-b8a8-68bc12e5f589" bidirectional="false">
+					<Description><![CDATA[]]></Description>
+				</Mapping>
+				<Mapping  ID="c6e6a489-1f6c-4521-8536-c7e58c0dd35c" name="Application Deployment Mapping" source="fe03351a-85e0-4a94-9e84-32170f9b6007" target="33e1a3b2-4440-48f7-b5f6-01ae943b3bd9" bidirectional="false">
+					<Description><![CDATA[]]></Description>
+				</Mapping>
+				<Mapping  ID="8b1eee94-45a6-4d3b-b87c-03e8970b794f" name="Service/Module Mapping" source="a848f15f-8445-4541-b8a8-68bc12e5f589" target="b2ed2cb0-34a1-4ae8-97e1-785a9df7f45e" bidirectional="false">
+					<Description><![CDATA[]]></Description>
+				</Mapping>
+				<Mapping  ID="7c56e061-d8b7-49b8-95dd-7b26ee058087" name="Smart Client Application Mapping" source="fe03351a-85e0-4a94-9e84-32170f9b6007" target="b2ed2cb0-34a1-4ae8-97e1-785a9df7f45e" bidirectional="false">
+					<Description><![CDATA[]]></Description>
+				</Mapping>
+				<Mapping  ID="1045384b-8e36-4e97-95b5-35e986d240e1" name="Feature / Component Mapping" source="c3b954a7-f952-4966-a632-f4379d6699dd" target="2fd837f4-7f66-4dcf-8b1b-4cd53643d7a2" bidirectional="false">
+					<Description><![CDATA[]]></Description>
+				</Mapping>
+				<Mapping  ID="2b66d38a-5d6d-4355-9200-c868b2b94601" name="Component Distribution" source="fe03351a-85e0-4a94-9e84-32170f9b6007" target="2fd837f4-7f66-4dcf-8b1b-4cd53643d7a2" bidirectional="false">
+					<Description><![CDATA[]]></Description>
+				</Mapping>
+				<Mapping  ID="70b7753b-2c1b-4589-a122-32bf134c9291" name="Variability Mapping" source="8be59274-97b2-4bc9-800c-14fc6fbfbe26" target="33e1a3b2-4440-48f7-b5f6-01ae943b3bd9" bidirectional="false">
+					<Description><![CDATA[]]></Description>
+				</Mapping>
+		
+		
+	</Mappings>
+	
+</SFSchema>

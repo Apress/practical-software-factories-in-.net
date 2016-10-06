@@ -1,0 +1,16 @@
+<!--DSL Tools Language Template-->
+<VSTemplate Version="2.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TemplateData>
+		<Name>Feature Model</Name>
+		<Description>Creates an empty feature model</Description>
+		<Icon>__TemplateIcon.ico</Icon>
+		<SortOrder>360</SortOrder>
+		<ProjectType>CSharp</ProjectType>
+		<DefaultName>FeatureModel.featuremodel</DefaultName>
+		<AppendDefaultFileExtension>true</AppendDefaultFileExtension>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.featuremodel">template.featuremodel</ProjectItem>
+	</TemplateContent>
+</VSTemplate>
+

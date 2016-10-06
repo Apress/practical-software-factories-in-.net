@@ -1,0 +1,85 @@
+<RootFeature name="Investigation &amp; Case Management">
+  <Feature name="Manage cases" kind="Mandatory" configuration="Included">
+    <Feature name="Write investigation report" kind="Mandatory" configuration="Included" />
+    <Feature name="Archive case" kind="Mandatory" configuration="Included" />
+    <Feature name="Notifications" kind="Optional" configuration="Unspecified">
+      <FeatureSet min="1" max="N">
+        <Feature name="Case created" kind="FeatureSetFeature" configuration="Unspecified" />
+        <Feature name="Evidence documented" kind="FeatureSetFeature" configuration="Unspecified" />
+        <Feature name="Case closed" kind="FeatureSetFeature" configuration="Unspecified" />
+        <Feature name="Report written" kind="FeatureSetFeature" configuration="Unspecified" />
+      </FeatureSet>
+      <FeatureSet min="1" max="N">
+        <Feature name="Supervisor" kind="FeatureSetFeature" configuration="Unspecified" />
+        <Feature name="CEO" kind="FeatureSetFeature" configuration="Unspecified" />
+        <Feature name="Office staff" kind="FeatureSetFeature" configuration="Unspecified" />
+        <Feature name="Agent" kind="FeatureSetFeature" configuration="Unspecified" />
+      </FeatureSet>
+    </Feature>
+    <Feature name="Search cases" kind="Mandatory" configuration="Included" />
+  </Feature>
+  <Feature name="Conduct investigation" kind="Mandatory" configuration="Included">
+    <Feature name="Document evidence" kind="Mandatory" configuration="Included">
+      <FeatureSet min="1" max="N">
+        <Feature name="Image" kind="FeatureSetFeature" configuration="Unspecified" />
+        <Feature name="Audio" kind="FeatureSetFeature" configuration="Unspecified" />
+        <Feature name="Video" kind="FeatureSetFeature" configuration="Unspecified" />
+      </FeatureSet>
+    </Feature>
+    <Feature name="Research" kind="Mandatory" configuration="Included">
+      <Feature name="Check license plate" kind="Optional" configuration="Unspecified" />
+      <Feature name="Perform background check" kind="Mandatory" configuration="Included" />
+      <Feature name="Search court records" kind="Mandatory" configuration="Included" />
+      <Feature name="Search newspaper archives" kind="Mandatory" configuration="Included" />
+    </Feature>
+    <Feature name="Investigation support" kind="Mandatory" configuration="Included">
+      <Feature name="Order equipment" kind="Optional" configuration="Unspecified">
+        <Feature name="Browse products" kind="Mandatory" configuration="Included" />
+        <Feature name="Consolidate orders" kind="Optional" configuration="Unspecified" />
+        <Feature name="Order &amp; pay" kind="Mandatory" configuration="Included" />
+      </Feature>
+      <Feature name="Get maps &amp; location" kind="Optional" configuration="Unspecified" />
+      <Feature name="Emergency call" kind="Optional" configuration="Unspecified" />
+    </Feature>
+  </Feature>
+  <Feature name="Manage expenses" kind="Mandatory" configuration="Included">
+    <Feature name="Expense report" kind="Mandatory" configuration="Included">
+      <Feature name="Attached receipts" kind="Optional" configuration="Unspecified" />
+    </Feature>
+    <Feature name="Approval process" kind="Optional" configuration="Unspecified" />
+    <Feature name="Notifications" kind="Optional" configuration="Unspecified">
+      <FeatureSet min="0" max="N">
+        <Feature name="Submitted" kind="FeatureSetFeature" configuration="Unspecified" />
+        <Feature name="Approved" kind="FeatureSetFeature" configuration="Unspecified" />
+        <Feature name="Information required" kind="FeatureSetFeature" configuration="Unspecified" />
+        <Feature name="Rejected" kind="FeatureSetFeature" configuration="Unspecified" />
+      </FeatureSet>
+      <FeatureSet min="0" max="N">
+        <Feature name="Agent" kind="FeatureSetFeature" configuration="Unspecified" />
+        <Feature name="Finances Dept." kind="FeatureSetFeature" configuration="Unspecified" />
+        <Feature name="Supervisor" kind="FeatureSetFeature" configuration="Unspecified" />
+      </FeatureSet>
+    </Feature>
+  </Feature>
+  <Feature name="Manage clients" kind="Mandatory" configuration="Included">
+    <Feature name="Appointments" kind="Mandatory" configuration="Included">
+      <Feature name="Calendar" kind="Mandatory" configuration="Included" />
+      <Feature name="Reminder" kind="Optional" configuration="Unspecified" />
+    </Feature>
+    <Feature name="Meeting notes" kind="Mandatory" configuration="Included" />
+    <Feature name="Mass mails" kind="Mandatory" configuration="Included" />
+    <Feature name="Client self-service" kind="Optional" configuration="Unspecified" />
+  </Feature>
+  <Feature name="Accounting" kind="Optional" configuration="Unspecified">
+    <Feature name="Invoice clients" kind="Mandatory" configuration="Included" />
+    <Feature name="Adjust balance" kind="Mandatory" configuration="Included" />
+    <Feature name="Remind late payers" kind="Optional" configuration="Unspecified" />
+  </Feature>
+  <Feature name="Security &amp; Policies" kind="Mandatory" configuration="Included">
+    <FeatureSet min="3" max="N">
+      <Feature name="Non-restricted" kind="FeatureSetFeature" configuration="Unspecified" />
+      <Feature name="Restricted" kind="FeatureSetFeature" configuration="Unspecified" />
+      <Feature name="Highly confidential" kind="FeatureSetFeature" configuration="Unspecified" />
+    </FeatureSet>
+  </Feature>
+</RootFeature>

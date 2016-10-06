@@ -1,0 +1,110 @@
+<html>
+<head>
+	<title>ISpySoft Case Study</title>
+</head>
+<body style="font-family: Verdana, Arial;">
+<H1>
+	<img src="ispysoft.png" border=0 align="absMiddle" /> ISpySoft Case Study</H1>
+<P>This document describes the content of the package that accompanies our book "<EM>Practical 
+		Software Factories in .Net"</EM>. It contains parts of the Software 
+	Factories case study that we conducted in course of writing. For a quick 
+	overview, we structured this document by chapter, as it appears in the book.</P>
+<h2>
+	Current State</h2>
+	This drop contains the three tools that we developed throughout the ISpySoft case study:
+	<ul>
+		<li>Feature Modeling DSL</li>
+		<li>Software Factory Schema DSL</li>
+		<li>Feature Model Configurator</li>
+	</ul>
+	<p>Because we decided to publish the ISpySoft Software Factory as a 
+	community project on
+	<a href="http://www.codeplex.com/Wiki/View.aspx?ProjectName=ISpySoft">
+	Codeplex</a> and it therefore becomes a moving target, we do not to include 
+	it in this package. We rather refer you to the ISpySoft site at
+	<a href="http://www.codeplex.com/Wiki/View.aspx?ProjectName=ISpySoft">
+	Codeplex</a> to download the latest bits from there. On the
+	<a href="http://www.codeplex.com/Wiki/View.aspx?ProjectName=ISpySoft">
+	Codeplex</a> site you can find the prototypical ISpySoft application, guidance packages, 
+	and the Software Factory template. Furthermore, in the future we will also update the DSLs to use the latest version of Microsoft DSL Tools.</p>
+	<p>So stay tuned and also check out new information at <a href="http://www.ispysoft.net" target="_blank">www.ispysoft.net</a></p>
+<h2>
+	Prerequisites</h2>
+<p>
+	Each DSL comes with its own .MSI installer, which also contains the redistributable
+	libraries for the DSL Toolkit. Therefore, if you only want to look at the models
+	you will only need to install the corresponding DSLs.</p>
+	<p>
+		In case you would like to take a look a the meta-model and possibly make your own
+		modifications, you will need the following prerequisites installed in order to be able to open
+	and build the source code:</p>
+<p>
+	<strong>
+	Visual Studio 2005 SDK - V1 RTM October 2005</strong><br />
+	(available from the <a href="http://affiliate.vsipmembers.com/affiliate/default.aspx">
+		Visual Studio Industry Partner Affiliate</a> homepage)</p>
+<p>
+	<strong>Domain-Specific Language Toolkit</strong><br />
+	(available from the<a href="http://download.microsoft.com/download/8/f/4/8f4a191f-329e-47b5-8fe7-9a26dca5113e/Microsoft%20DSL%20Tools%20-%20Nov2005CTP.zip">
+		Domain-Specific Language Tools</a> homepage)</p>
+<H2>Chapter 3</H2>
+<H3>Feature Model DSL</H3>
+<p>
+	The Feature Model DSL allows for creating feature models as they are used to
+	describe the commonalities and variabilities of a product line. The link below starts
+	the installer that installs the Feature Model DSL into the Visual Studio 2005
+	environment.</p>
+<p>
+	<a href="Installers\Feature Model DSL\FeatureModelDSL.msi" target="_blank">Feature Model DSL Installer (.msi)</a></p>
+<H3>ISySoft Problem and Solution Feature Models</H3>
+<p>
+	The ISpySoft is contains two feature models; one for the problem domain of Private
+	Eye Investigation, and one for the solution domain. The two links below open the
+	feature models in Visual Studio 2005. Requirement is that the Feature Modeling DSL
+	is correctly installed.</p>
+	<p>
+		<a href="Models/Feature Models/" target="_blank">ISpySoft Problem Feature
+			Model (.featuremodel)</a><br />
+		<a href="Models/Feature Models/" target="_blank">ISpySoft Solution Feature
+			Model (.featuremodel)</a></p>
+<H2>Chapter 5</H2>
+<H3>Software Factory Schema DSL</H3>
+<p>
+	The Software Factory Schema DSL allows for creating Software Factory Schemas that
+	are used to formally describe Software Factories. The link below starts the installer
+	that installs the Software Factory Schema DSL into the Visual Studio 2005 environment.</p>
+<p>
+	<a href="Installers/Software Factory Schema DSL/SoftwareFactorySchemaDSL.msi" target="_blank">Software
+		Factory Schema DSL Installer (.msi)</a></p>
+<H3>ISySoft Software Factory Schema Project</H3>
+<p>
+	The link below opens a Visual Studio 2005 solution that contains the ISpySoft Software
+	Factory schema. Furthermore this solution contains an instance of the Software Factory
+	Schema Browser. Upon pressing F5, Visual Studio will open a Internet Explorer window
+	with the ISpySoft Software Factory Schema Browser</p>
+<p>
+		<a href="Models/Software Factory Schema/" target="_blank">ISpySoft
+			Software Factory Schema Project (.sln)</a><br />
+<H2>Chapter 8</H2>
+<h3>
+	Feature Model Configurator</h3>
+<p>
+	The Feature Model Configurator is used during application development to select
+	and deselect variabilities in feature models. These configurations can then be used
+	e.g. by automated guidance steps to generate the appropriate code or configure components
+	and services correctly.</p>
+<p>
+	<a href="Installers/Feature Model DSL/FeatureModelDSL.msi" target="_blank">Software
+		Factory Schema DSL Installer (.msi)</a>
+</p>
+	<h2>
+		Contact Us</h2>
+	<p>
+		Latest news can either be found on <a href="http://www.ispysoft.net" target="_blank">www.ispysoft.net</a>
+		or on our development webiste <a href="http://www.codeplex.com/Wiki/View.aspx?ProjectName=ISpySoft" target="_blank">
+			www.codeplex.com</a>.</p>
+	<p>
+		Our email addresses are <a href="mailto:gunther@ispysoft.net">gunther@ispysoft.net</a>
+		and <a href="mailto:christoph@ispysoft.net">christoph@ispysoft.net</a>.</p>
+</body>
+</html>

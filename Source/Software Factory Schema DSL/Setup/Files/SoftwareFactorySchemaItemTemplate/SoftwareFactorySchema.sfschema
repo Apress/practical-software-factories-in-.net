@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="1" xmlns:om="http://Microsoft.VisualStudio.Modeling">
+    <om:SubStore SubstoreType="Microsoft.VisualStudio.Modeling.Core" />
+    <om:SubStore SubstoreType="Microsoft.VisualStudio.Modeling.Diagrams.CoreDesignSurface" />
+    <om:SubStore SubstoreType="Microsoft.VisualStudio.Modeling.Utilities.UtilitiesModel" />
+    <om:SubStore SubstoreType="ISpySoft.SFSchemaLanguage.DomainModel.SFSchemaLanguage" />
+    <om:SubStore SubstoreType="ISpySoft.SFSchemaLanguage.Designer.SFSchemaLanguageDesigner" />
+    <om:ModelElement Type="ISpySoft.SFSchemaLanguage.DomainModel.SchemaModel" Id="7c4af380-fc22-473c-a133-14e8338d835c">
+        <om:Property Name="Name" Value="" />
+        <om:ElementLink Type="Microsoft.VisualStudio.Modeling.SubjectHasPresentation" Id="20c038a2-c1d8-4e87-a4a8-aed7dc99942c">
+            <om:Role Name="Subject" Id="7c4af380-fc22-473c-a133-14e8338d835c" />
+            <om:Role Name="Presentation" Id="06e7ed72-1e14-4e48-959f-8a05c34dbf32" />
+        </om:ElementLink>
+    </om:ModelElement>
+    <om:ModelElement Type="ISpySoft.SFSchemaLanguage.Designer.SFSchemaLanguageDiagram" Id="06e7ed72-1e14-4e48-959f-8a05c34dbf32">
+        <om:Property Name="IsCompleteView" Value="False" />
+        <om:Property Name="DiagramId" Value="4da4cb0a-e5ee-4cb6-a103-5cf6d4a19e05" />
+        <om:Property Name="Name" Value="" />
+        <om:Property Name="BaseFontName" Value="Tahoma" />
+        <om:Property Name="BaseFontSize" Value="0.11458333581686" />
+        <om:Property Name="IsExpanded" Value="AAEAAAD/////AQAAAAAAAAAEAQAAAA5TeXN0ZW0uQm9vbGVhbgEAAAAHbV92YWx1ZQABAQs=" />
+        <om:Property Name="AbsoluteBounds" Value="AAEAAAD/////AQAAAAAAAAAMAgAAAG9NaWNyb3NvZnQuVmlzdWFsU3R1ZGlvLk1vZGVsaW5nLlNkay5EaWFncmFtcywgVmVyc2lvbj04LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAADNNaWNyb3NvZnQuVmlzdWFsU3R1ZGlvLk1vZGVsaW5nLkRpYWdyYW1zLlJlY3RhbmdsZUQEAAAAAXgBeQV3aWR0aAZoZWlnaHQAAAAABgYGBgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJkAAAAAAAAAhQAs=" />
+        <om:ElementLink Type="Microsoft.VisualStudio.Modeling.SubjectHasPresentation" Id="20c038a2-c1d8-4e87-a4a8-aed7dc99942c">
+            <om:Role Name="Presentation" Id="06e7ed72-1e14-4e48-959f-8a05c34dbf32" />
+            <om:Role Name="Subject" Id="7c4af380-fc22-473c-a133-14e8338d835c" />
+        </om:ElementLink>
+    </om:ModelElement>
+</om:MetaModel>

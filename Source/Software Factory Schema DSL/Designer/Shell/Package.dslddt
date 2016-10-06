@@ -1,0 +1,28 @@
+<#
+/***************************************************************************
+         Copyright (c) Microsoft Corporation, All rights reserved.             
+    This code sample is provided "AS IS" without warranty of any kind, 
+    it is not recommended for use in a production environment.
+***************************************************************************/
+#>
+<#@ include file="Designer\Shell\Package.dslddi" #>
+<#@ definition processor="DDDirectiveProcessor" requires="fileName='..\\Designer.dsldd'" #>
+//
+// Package attributes which may need to change are placed on the partial class below, rather than in the main include file.
+//
+namespace <#=this.Definition.Namespace#>
+{
+	#region Using directives
+	using Microsoft.VisualStudio.Shell;
+	#endregion
+	
+	// A package load key is required to allow this package to load when the VS SDK is not installed.
+	// Package load keys may be obtained from http://msdn.microsoft.com/vstudio/extend.
+	// Consult the VS SDK documentation for more information.
+	// [ProvideLoadKey("Standard", Constants.productVersion, Constants.productName, Constants.companyName, 1)]
+	[ProvideMenuResource(1000, 2)]
+	[ProvideToolboxItems(1)]
+	public sealed partial class <#=this.Definition.Name#>Package
+	{
+	}
+}

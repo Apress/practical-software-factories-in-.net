@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="RootFeature" type="RootFeatureType" />
+  <xs:complexType name="RootFeatureType">
+    <xs:choice minOccurs="1" maxOccurs="unbounded">
+      <xs:element name="Feature" type="FeatureType" minOccurs="1" maxOccurs="unbounded" />
+      <xs:element name="FeatureSet" type="FeatureSetType" minOccurs="1" maxOccurs="unbounded" />
+    </xs:choice>
+    <xs:attribute name="name" type="xs:string" use="required" />
+  </xs:complexType>
+  <!--<xs:complexType name="AbstractFeatureType" abstract="true"/>-->
+  <xs:complexType name="FeatureType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="Feature" type="FeatureType" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="FeatureSet" type="FeatureSetType" minOccurs="0" maxOccurs="unbounded" />
+    </xs:choice>
+    <xs:attribute name="name" type="xs:string" use="required" />
+    <xs:attribute name="kind" type="KindType" use="required" />
+    <xs:attribute name="configuration" type="ConfigType" use="required" />
+  </xs:complexType>
+  <xs:complexType name="FeatureSetType">
+    <xs:sequence>
+      <xs:element name="Feature" type="FeatureType" minOccurs="2" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="min" type="xs:integer" use="required" />
+    <xs:attribute name="max" type="xs:integer" use="required" />
+  </xs:complexType>
+  <xs:simpleType name="KindType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Mandatory" />
+      <xs:enumeration value="Optional" />
+      <xs:enumeration value="FeatureSetFeature" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ConfigType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unspecified" />
+      <xs:enumeration value="Excluded" />
+      <xs:enumeration value="Included" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

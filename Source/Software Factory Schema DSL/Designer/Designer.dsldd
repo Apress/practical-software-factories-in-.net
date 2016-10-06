@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+<designerDefinition namespace="ISpySoft.SFSchemaLanguage.Designer" name="SFSchemaLanguage" fileExtension="sfschema" companyName="CompanyName" productName="SFSchemaLanguageDesigner" packageName="SFSchemaLanguageDesigner" productVersion="1.0.0.0" xmlns="http://schemas.microsoft.com/dsltools/dsldd">
+  <explorer>
+    <defaultRenderings>
+    </defaultRenderings>
+    <roots>
+      <elementNode useDefaultRendering="true">
+        <childCollections/>
+        <class>ISpySoft.SFSchemaLanguage.DomainModel.SFSchemaLanguage/SchemaModel</class>
+      </elementNode>
+    </roots>
+  </explorer>
+  <notation>
+    <diagramMaps>
+      <diagramMap>
+        <class>ISpySoft.SFSchemaLanguage.DomainModel.SFSchemaLanguage/SchemaModel</class>
+        <connectorMaps>
+          <connectorMap>
+            <class>ISpySoft.SFSchemaLanguage.DomainModel.SFSchemaLanguage/SchemaModelItemHasSchemaModelItem</class>
+            <connector>ISpySoft.SFSchemaLanguage.Designer.SFSchemaLanguageDiagram/Connectors/SchemaModelItemHasSchemaModelItemConnector</connector>
+            <sourceMap>
+              <modelNavigationExpression>
+                <roleExpression>
+                  <role>ISpySoft.SFSchemaLanguage.DomainModel.SFSchemaLanguage/SchemaModelItemHasSchemaModelItem/SchemaModelItemSource</role>
+                </roleExpression>
+              </modelNavigationExpression>
+            </sourceMap>
+            <targetMap>
+              <modelNavigationExpression>
+                <roleExpression>
+                  <role>ISpySoft.SFSchemaLanguage.DomainModel.SFSchemaLanguage/SchemaModelItemHasSchemaModelItem/SchemaModelItemTarget</role>
+                </roleExpression>
+              </modelNavigationExpression>
+            </targetMap>
+            <textMaps>
+              <connectorTextMap>
+                <textDecorator>ISpySoft.SFSchemaLanguage.Designer.SFSchemaLanguageDiagram/Connectors/SchemaModelItemHasSchemaModelItemConnector/Decorators/Label</textDecorator>
+                <valueExpression>
+                  <valuePropertyExpression>
+                    <valueProperty>ISpySoft.SFSchemaLanguage.DomainModel.SFSchemaLanguage/SchemaModelItemHasSchemaModelItem/Description</valueProperty>
+                  </valuePropertyExpression>
+                </valueExpression>
+              </connectorTextMap>
+            </textMaps>
+          </connectorMap>
+        </connectorMaps>
+        <diagram>ISpySoft.SFSchemaLanguage.Designer.SFSchemaLanguageDiagram</diagram>
+        <shapeMaps>
+          <shapeMap>
+            <class>ISpySoft.SFSchemaLanguage.DomainModel.SFSchemaLanguage/Activity</class>
+            <iconMaps>
+            </iconMaps>
+            <melCollectionExpression>
+              <roleExpression>
+                <role>ISpySoft.SFSchemaLanguage.DomainModel.SFSchemaLanguage/SchemaModel/SchemaModelItems</role>
+              </roleExpression>
+            </melCollectionExpression>
+            <shape>ISpySoft.SFSchemaLanguage.Designer.SFSchemaLanguageDiagram/Shapes/ActivityShape</shape>
+            <textMaps>
+              <shapeTextMap>
+                <textDecorator>ISpySoft.SFSchemaLanguage.Designer.SFSchemaLanguageDiagram/Shapes/ActivityShape/Decorators/Name</textDecorator>
+                <valueExpression>
+                  <valuePropertyExpression>
+                    <valueProperty>ISpySoft.SFSchemaLanguage.DomainModel.SFSchemaLanguage/Activity/Name</valueProperty>
+                  </valuePropertyExpression>
+                </valueExpression>
+              </shapeTextMap>
+            </textMaps>
+          </shapeMap>
+          <shapeMap>
+            <class>ISpySoft.SFSchemaLanguage.DomainModel.SFSchemaLanguage/Artifact</class>
+            <iconMaps>
+              <shapeIconMap>
+                <iconDecorator>ISpySoft.SFSchemaLanguage.Designer.SFSchemaLanguageDiagram/Shapes/ArtifactShape/Decorators/AssetIcon</iconDecorator>
+                <visibilityExpression>
+                  <enumerationBooleanExpression>
+                    <valueProperty>ISpySoft.SFSchemaLanguage.DomainModel.SFSchemaLanguage/Artifact/Type</valueProperty>
+                    <choices>
+                      <cdlEnumerationLiteral>ISpySoft.SFSchemaLanguage.DomainModel.SFSchemaLanguage/ArtifactType/Asset</cdlEnumerationLiteral>
+                    </choices>
+                  </enumerationBooleanExpression>
+                </visibilityExpression>
+              </shapeIconMap>
+              <shapeIconMap>
+                <iconDecorator>ISpySoft.SFSchemaLanguage.Designer.SFSchemaLanguageDiagram/Shapes/ArtifactShape/Decorators/ToolIcon</iconDecorator>
+                <visibilityExpression>
+                  <enumerationBooleanExpression>
+                    <valueProperty>ISpySoft.SFSchemaLanguage.DomainModel.SFSchemaLanguage/Artifact/Type</valueProperty>
+                    <choices>
+                      <cdlEnumerationLiteral>ISpySoft.SFSchemaLanguage.DomainModel.SFSchemaLanguage/ArtifactType/Tool</cdlEnumerationLiteral>
+                    </choices>
+                  </enumerationBooleanExpression>
+                </visibilityExpression>
+              </shapeIconMap>
+              <shapeIconMap>
+                <iconDecorator>ISpySoft.SFSchemaLanguage.Designer.SFSchemaLanguageDiagram/Shapes/ArtifactShape/Decorators/WorkProductIcon</iconDecorator>
+                <visibilityExpression>
+                  <enumerationBooleanExpression>
+                    <valueProperty>ISpySoft.SFSchemaLanguage.DomainModel.SFSchemaLanguage/Artifact/Type</valueProperty>
+                    <choices>
+                      <cdlEnumerationLiteral>ISpySoft.SFSchemaLanguage.DomainModel.SFSchemaLanguage/ArtifactType/WorkProduct</cdlEnumerationLiteral>
+                    </choices>
+                  </enumerationBooleanExpression>
+                </visibilityExpression>
+              </shapeIconMap>
+            </iconMaps>
+            <melCollectionExpression>
+              <roleExpression>
+                <role>ISpySoft.SFSchemaLanguage.DomainModel.SFSchemaLanguage/SchemaModel/SchemaModelItems</role>
+              </roleExpression>
+            </melCollectionExpression>
+            <shape>ISpySoft.SFSchemaLanguage.Designer.SFSchemaLanguageDiagram/Shapes/ArtifactShape</shape>
+            <textMaps>
+              <shapeTextMap>
+                <textDecorator>ISpySoft.SFSchemaLanguage.Designer.SFSchemaLanguageDiagram/Shapes/ArtifactShape/Decorators/Name</textDecorator>
+                <valueExpression>
+                  <valuePropertyExpression>
+                    <valueProperty>ISpySoft.SFSchemaLanguage.DomainModel.SFSchemaLanguage/Artifact/Name</valueProperty>
+                  </valuePropertyExpression>
+                </valueExpression>
+              </shapeTextMap>
+            </textMaps>
+          </shapeMap>
+          <shapeMap>
+            <class>ISpySoft.SFSchemaLanguage.DomainModel.SFSchemaLanguage/Mapping</class>
+            <iconMaps>
+            </iconMaps>
+            <melCollectionExpression>
+              <roleExpression>
+                <role>ISpySoft.SFSchemaLanguage.DomainModel.SFSchemaLanguage/SchemaModel/SchemaModelItems</role>
+              </roleExpression>
+            </melCollectionExpression>
+            <shape>ISpySoft.SFSchemaLanguage.Designer.SFSchemaLanguageDiagram/Shapes/MappingShape</shape>
+            <textMaps>
+              <shapeTextMap>
+                <textDecorator>ISpySoft.SFSchemaLanguage.Designer.SFSchemaLanguageDiagram/Shapes/MappingShape/Decorators/Name</textDecorator>
+                <valueExpression>
+                  <valuePropertyExpression>
+                    <valueProperty>ISpySoft.SFSchemaLanguage.DomainModel.SFSchemaLanguage/Mapping/Name</valueProperty>
+                  </valuePropertyExpression>
+                </valueExpression>
+              </shapeTextMap>
+            </textMaps>
+          </shapeMap>
+          <shapeMap>
+            <class>ISpySoft.SFSchemaLanguage.DomainModel.SFSchemaLanguage/ViewPoint</class>
+            <compartmentMaps>
+              <compartmentMap>
+                <compartment>ISpySoft.SFSchemaLanguage.Designer.SFSchemaLanguageDiagram/Shapes/ViewPointShape/Compartments/StakeholderCompartment</compartment>
+                <melCollectionExpression>
+                  <roleExpression>
+                    <role>ISpySoft.SFSchemaLanguage.DomainModel.SFSchemaLanguage/ViewPoint/Stakeholders</role>
+                  </roleExpression>
+                </melCollectionExpression>
+                <valueExpression>
+                  <valuePropertyExpression>
+                    <valueProperty>ISpySoft.SFSchemaLanguage.DomainModel.SFSchemaLanguage/Stakeholder/Name</valueProperty>
+                  </valuePropertyExpression>
+                </valueExpression>
+              </compartmentMap>
+            </compartmentMaps>
+            <iconMaps>
+            </iconMaps>
+            <melCollectionExpression>
+              <roleExpression>
+                <role>ISpySoft.SFSchemaLanguage.DomainModel.SFSchemaLanguage/SchemaModel/SchemaModelItems</role>
+              </roleExpression>
+            </melCollectionExpression>
+            <shape>ISpySoft.SFSchemaLanguage.Designer.SFSchemaLanguageDiagram/Shapes/ViewPointShape</shape>
+            <textMaps>
+              <shapeTextMap>
+                <textDecorator>ISpySoft.SFSchemaLanguage.Designer.SFSchemaLanguageDiagram/Shapes/ViewPointShape/Decorators/Name</textDecorator>
+                <valueExpression>
+                  <valuePropertyExpression>
+                    <valueProperty>ISpySoft.SFSchemaLanguage.DomainModel.SFSchemaLanguage/ViewPoint/Name</valueProperty>
+                  </valuePropertyExpression>
+                </valueExpression>
+              </shapeTextMap>
+            </textMaps>
+          </shapeMap>
+        </shapeMaps>
+      </diagramMap>
+    </diagramMaps>
+    <diagrams>
+      <diagram name="SFSchemaLanguageDiagram">
+        <connectors>
+          <connector name="SchemaModelItemHasSchemaModelItemConnector">
+            <color variability="Api" color="black" />
+            <dashStyle variability="Api" dashStyle="solid"/>
+            <decorators>
+              <connectorText name="Label" position="TargetBottom" defaultTextId="DefaultLabelText"/>
+            </decorators>
+            <source>
+              <permittedShapes>
+                <shape>ISpySoft.SFSchemaLanguage.Designer.SFSchemaLanguageDiagram/Shapes/ActivityShape</shape>
+                <shape>ISpySoft.SFSchemaLanguage.Designer.SFSchemaLanguageDiagram/Shapes/ViewPointShape</shape>
+                <shape>ISpySoft.SFSchemaLanguage.Designer.SFSchemaLanguageDiagram/Shapes/MappingShape</shape>
+              </permittedShapes>
+            </source>
+            <target arrowStyle="EmptyArrow">
+              <permittedShapes>
+                <shape>ISpySoft.SFSchemaLanguage.Designer.SFSchemaLanguageDiagram/Shapes/ArtifactShape</shape>
+                <shape>ISpySoft.SFSchemaLanguage.Designer.SFSchemaLanguageDiagram/Shapes/ActivityShape</shape>
+                <shape>ISpySoft.SFSchemaLanguage.Designer.SFSchemaLanguageDiagram/Shapes/ViewPointShape</shape>
+              </permittedShapes>
+            </target>
+          </connector>
+        </connectors>
+        <shapes>
+          <geometryShape name="ActivityShape" initialWidth="1.1" initialHeight="0.45" geometry="RoundedRectangle">
+            <decorators>
+              <shapeText name="Name" position="Center" defaultTextId="ActivityShapeNameDecorator"/>
+            </decorators>
+            <fillColor color="lightblue" variability="Api"/>
+            <outlineColor color="black" variability="Api"/>
+          </geometryShape>
+          <geometryShape name="ArtifactShape" initialWidth="1.1" initialHeight="0.45" geometry="Rectangle">
+            <decorators>
+              <shapeText name="Name" position="InnerBottomCenter" defaultTextId="ArtifactShapeNameDecorator"/>
+              <shapeIcon name="AssetIcon" position="InnerTopCenter" iconId="AssetIconFile"/>
+              <shapeIcon name="ToolIcon" position="InnerTopCenter" iconId="ToolIconFile"/>
+              <shapeIcon name="WorkProductIcon" position="InnerTopCenter" iconId="WorkProductIconFile"/>
+            </decorators>
+            <fillColor color="lime" variability="Api"/>
+            <outlineColor color="black" variability="Api"/>
+          </geometryShape>
+          <geometryShape name="MappingShape" initialWidth="1.1" initialHeight="0.45" geometry="RoundedRectangle">
+            <decorators>
+              <shapeText name="Name" position="Center" defaultTextId="MappingShapeNameDecorator"/>
+            </decorators>
+            <fillColor color="darkorange" variability="Api"/>
+            <outlineColor color="black" variability="Api"/>
+          </geometryShape>
+          <compartmentShape name="ViewPointShape" initialWidth="1.1" initialHeight="0.45" geometry="Rectangle">
+            <decorators>
+              <shapeText name="Name" position="Center"  defaultTextId="ViewPointShapeNameDecorator"/>
+              <expandCollapse name="ExpandCollapse" position="InnerTopRight" variability="Fixed" />
+            </decorators>
+            <fillColor color="crimson" variability="Api"/>
+            <outlineColor color="black" variability="Api"/>
+            <compartments>
+              <listCompartment name="StakeholderCompartment" captionId="StakeholderCompartmentCaption">
+                <compartmentFillColor color="white" variability="Fixed" />
+                <titleFillColor color="lightgray" variability="Fixed"/>
+              </listCompartment>
+            </compartments>
+          </compartmentShape>
+        </shapes>
+        <toolbox>
+          <items>
+            <shapeTool iconId="activity" captionId="ActivityShapeToolboxCaption" contextSensitiveHelpId="ExampleShapeHelpId" order="4">
+              <shape>ISpySoft.SFSchemaLanguage.Designer.SFSchemaLanguageDiagram/Shapes/ActivityShape</shape>
+            </shapeTool>
+            <shapeTool iconId="artifact" captionId="ArtifactShapeToolboxCaption" contextSensitiveHelpId="ExampleShapeHelpId" order="3">
+              <shape>ISpySoft.SFSchemaLanguage.Designer.SFSchemaLanguageDiagram/Shapes/ArtifactShape</shape>
+            </shapeTool>
+            <shapeTool iconId="mapping" captionId="MappingShapeToolboxCaption" contextSensitiveHelpId="ExampleShapeHelpId" order="1">
+              <shape>ISpySoft.SFSchemaLanguage.Designer.SFSchemaLanguageDiagram/Shapes/MappingShape</shape>
+            </shapeTool>
+            <shapeTool iconId="viewpoint" captionId="ViewPointShapeToolboxCaption" contextSensitiveHelpId="ExampleShapeHelpId" order="0">
+              <shape>ISpySoft.SFSchemaLanguage.Designer.SFSchemaLanguageDiagram/Shapes/ViewPointShape</shape>
+            </shapeTool>
+            <connectorTool iconId="connector" captionId="ActivityHasArtifactConnectorToolboxCaption" contextSensitiveHelpId="ExampleConnectorHelpId" order="5">
+              <connector>ISpySoft.SFSchemaLanguage.Designer.SFSchemaLanguageDiagram/Connectors/SchemaModelItemHasSchemaModelItemConnector</connector>
+            </connectorTool>
+          </items>
+        </toolbox>
+      </diagram>
+    </diagrams>
+  </notation>
+  <objectModels>
+    <objectModel name="ISpySoft.SFSchemaLanguage.DomainModel.SFSchemaLanguage" fileName="..\DomainModel\DomainModel.dsldm">
+      <model>ISpySoft.SFSchemaLanguage.DomainModel.SFSchemaLanguage</model>
+    </objectModel>
+  </objectModels>
+  <propertiesWindow>
+    <propertySets>
+    </propertySets>
+  </propertiesWindow>
+  <validation open="true" save="true" menu="true" custom="false"/>
+</designerDefinition>

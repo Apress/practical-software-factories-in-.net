@@ -1,0 +1,243 @@
+<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation"#>
+<#@ output extension=".xml" #>
+<#@ SchemaModel processor="SFSchemaLanguageDirectiveProcessor" requires="fileName='SoftwareFactorySchema.sfschema'" provides="SchemaModel=SchemaModel" #>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="SoftwareFactorySchemaBrowser.xsl"?>
+<#
+System.Collections.ArrayList stakeholderlist = new System.Collections.ArrayList();
+System.Collections.Hashtable activitieshashtbl = new System.Collections.Hashtable();
+System.Collections.Hashtable artifactshashtbl = new System.Collections.Hashtable();
+System.Collections.Hashtable viewpointshashtbl = new System.Collections.Hashtable();
+
+
+
+            
+foreach ( object o in SchemaModel.SchemaModelItems ) 
+{
+		if (o.GetType() == typeof(ISpySoft.SFSchemaLanguage.DomainModel.ViewPoint))
+		{
+			if (!viewpointshashtbl.Contains(((ISpySoft.SFSchemaLanguage.DomainModel.ViewPoint)o).Id.ToString()))
+			{
+				viewpointshashtbl.Add(((ISpySoft.SFSchemaLanguage.DomainModel.ViewPoint)o).Id.ToString(), ((ISpySoft.SFSchemaLanguage.DomainModel.ViewPoint)o).Name);
+			}
+			
+			
+			foreach (Stakeholder sh in ((ISpySoft.SFSchemaLanguage.DomainModel.ViewPoint)o).Stakeholders)
+			{
+				if (!stakeholderlist.Contains(sh.Name))
+				{
+					stakeholderlist.Add(sh.Name);
+				}
+			}	
+		}
+		if (o.GetType() == typeof(ISpySoft.SFSchemaLanguage.DomainModel.Activity))
+		{
+			if (!activitieshashtbl.Contains(((ISpySoft.SFSchemaLanguage.DomainModel.Activity)o).Id.ToString()))
+			{
+				activitieshashtbl.Add(((ISpySoft.SFSchemaLanguage.DomainModel.Activity)o).Id.ToString(), ((ISpySoft.SFSchemaLanguage.DomainModel.Activity)o).Name);
+			}
+		}
+		if (o.GetType() == typeof(ISpySoft.SFSchemaLanguage.DomainModel.Artifact))
+		{
+			if (!artifactshashtbl.ContainsKey(((ISpySoft.SFSchemaLanguage.DomainModel.Artifact)o).Id.ToString()))
+			{
+				System.Collections.ArrayList list = new System.Collections.ArrayList();
+				list.Add(((ISpySoft.SFSchemaLanguage.DomainModel.Artifact)o).GetProperties()["Type"].GetValue(((ISpySoft.SFSchemaLanguage.DomainModel.Artifact)o).GetProperties()["Type"]).ToString());
+				list.Add(((ISpySoft.SFSchemaLanguage.DomainModel.Artifact)o).Name);
+				artifactshashtbl.Add(((ISpySoft.SFSchemaLanguage.DomainModel.Artifact)o).Id.ToString(), list);	
+			}
+		}
+}
+#>
+<SFSchema>
+	<ViewPoints>
+<#
+        foreach (System.Collections.DictionaryEntry de in viewpointshashtbl)
+		{
+#>
+			<ViewPoint ID="<#= de.Key.ToString()#>" name="<#= de.Value.ToString()#>">			
+		<#
+			foreach ( object o in SchemaModel.SchemaModelItems ) 
+			{
+				if (o.GetType() == typeof(ISpySoft.SFSchemaLanguage.DomainModel.ViewPoint))
+				{
+					if (((ISpySoft.SFSchemaLanguage.DomainModel.ViewPoint)o).Id.ToString() == de.Key.ToString())
+					{
+		#>
+					<Stakeholders>
+		<#
+						foreach (Stakeholder stakeholder in ((ISpySoft.SFSchemaLanguage.DomainModel.ViewPoint)o).Stakeholders)
+						{
+		#>
+							<Stakeholder name="<#= stakeholder.Name#>"/>
+			<#					
+						}	
+			#>
+					</Stakeholders>
+			<#
+						foreach (object modelelement in ((ISpySoft.SFSchemaLanguage.DomainModel.ViewPoint)o).SchemaModelItemTarget)
+						{
+							if (modelelement.GetType() == typeof(ISpySoft.SFSchemaLanguage.DomainModel.Artifact))
+							{
+								string id = ((ISpySoft.SFSchemaLanguage.DomainModel.Artifact)modelelement).Id.ToString();
+			#>
+								<Artifact ID="<#= id#>"/>
+			<#
+							}
+
+							if (modelelement.GetType() == typeof(ISpySoft.SFSchemaLanguage.DomainModel.Activity))
+							{
+			#>
+								<Activity ID="<#= ((ISpySoft.SFSchemaLanguage.DomainModel.Activity)modelelement).Id.ToString()#>">
+			<#
+								foreach (object obj in ((ISpySoft.SFSchemaLanguage.DomainModel.Activity)modelelement).GetElementLinks())
+								{
+									if (obj.GetType() == typeof(ISpySoft.SFSchemaLanguage.DomainModel.SchemaModelItemHasSchemaModelItem))
+									{
+										if (((ISpySoft.SFSchemaLanguage.DomainModel.SchemaModelItemHasSchemaModelItem)obj).SchemaModelItemTarget.GetType() == typeof(ISpySoft.SFSchemaLanguage.DomainModel.Artifact))
+										{
+											if (((ISpySoft.SFSchemaLanguage.DomainModel.SchemaModelItemHasSchemaModelItem)obj).GetProperties()["Description"].GetValue(((ISpySoft.SFSchemaLanguage.DomainModel.SchemaModelItemHasSchemaModelItem)obj).GetProperties()["Description"]).ToString().Equals("uses"))
+											{
+				#>
+												<Uses>
+													<Artifact ID="<#= ((ISpySoft.SFSchemaLanguage.DomainModel.Artifact)((ISpySoft.SFSchemaLanguage.DomainModel.SchemaModelItemHasSchemaModelItem)obj).SchemaModelItemTarget).Id.ToString()#>"/>
+												</Uses>
+				<#
+											}
+		                            
+										}
+									}
+								}
+
+								foreach (object obj in ((ISpySoft.SFSchemaLanguage.DomainModel.Activity)modelelement).GetElementLinks())
+								{
+									if (obj.GetType() == typeof(ISpySoft.SFSchemaLanguage.DomainModel.SchemaModelItemHasSchemaModelItem))
+									{
+										if (((ISpySoft.SFSchemaLanguage.DomainModel.SchemaModelItemHasSchemaModelItem)obj).SchemaModelItemTarget.GetType() == typeof(ISpySoft.SFSchemaLanguage.DomainModel.Artifact))
+										{
+											if (((ISpySoft.SFSchemaLanguage.DomainModel.SchemaModelItemHasSchemaModelItem)obj).GetProperties()["Description"].GetValue(((ISpySoft.SFSchemaLanguage.DomainModel.SchemaModelItemHasSchemaModelItem)obj).GetProperties()["Description"]).ToString().Equals("writes"))
+											{
+				#>
+												<Writes>
+													<Artifact ID="<#= ((ISpySoft.SFSchemaLanguage.DomainModel.Artifact)((ISpySoft.SFSchemaLanguage.DomainModel.SchemaModelItemHasSchemaModelItem)obj).SchemaModelItemTarget).Id.ToString()#>"/>
+												</Writes>
+				<#
+											}
+		                            
+										}
+									}
+								}
+			#>
+								</Activity>
+			<#
+							}
+						}
+					}		
+				}
+			}
+			#>
+			</ViewPoint>
+		<#
+		}
+		#>
+	</ViewPoints>
+	<Stakeholders>
+<#
+		int count_sh = stakeholderlist.Count;
+		for (int i = 0; i < count_sh; i++)
+		{
+#>		
+			<Stakeholder name="<#= stakeholderlist[i]#>"/>			
+			<#
+			
+		}
+		#>
+		
+	</Stakeholders>
+	<Activities>
+<#
+		foreach (System.Collections.DictionaryEntry de in activitieshashtbl)
+		{
+#>		
+			<Activity ID="<#= de.Key.ToString()#>" name="<#= de.Value.ToString()#>"/>			
+			<#
+			
+		}
+		#>
+		
+	</Activities>
+	<Artifacts>
+<#
+		
+		foreach (System.Collections.DictionaryEntry de in artifactshashtbl)
+		{
+		
+#>		
+			<Artifact ID="<#= de.Key.ToString()#>" type="<#= ((System.Collections.ArrayList)de.Value)[0]#>" name="<#= ((System.Collections.ArrayList)de.Value)[1]#>"/>			
+			<#
+			
+		}
+		#>		
+	</Artifacts>
+
+	<Mappings>	
+	
+<#	
+		foreach ( object item in SchemaModel.SchemaModelItems ) 
+		{
+			if (item.GetType() == typeof(ISpySoft.SFSchemaLanguage.DomainModel.Mapping))
+			{
+				ISpySoft.SFSchemaLanguage.DomainModel.ViewPoint firstViewPoint = null;
+				ISpySoft.SFSchemaLanguage.DomainModel.ViewPoint secondViewPoint = null;
+				string firstViewPointState = null;
+				string secondViewPointState = null;
+				
+				foreach (object link in ((ISpySoft.SFSchemaLanguage.DomainModel.Mapping)item).GetElementLinks())
+				{
+					if (link.GetType() == typeof(ISpySoft.SFSchemaLanguage.DomainModel.SchemaModelItemHasSchemaModelItem))
+					{
+						if (firstViewPoint == null)
+						{
+							firstViewPoint = (ISpySoft.SFSchemaLanguage.DomainModel.ViewPoint)((ISpySoft.SFSchemaLanguage.DomainModel.SchemaModelItemHasSchemaModelItem)link).SchemaModelItemTarget;
+							firstViewPointState = ((ISpySoft.SFSchemaLanguage.DomainModel.SchemaModelItemHasSchemaModelItem)link).GetProperties()["Description"].GetValue(((ISpySoft.SFSchemaLanguage.DomainModel.SchemaModelItemHasSchemaModelItem)link).GetProperties()["Description"]).ToString();						
+						}	
+						else if (firstViewPoint == (ISpySoft.SFSchemaLanguage.DomainModel.ViewPoint)((ISpySoft.SFSchemaLanguage.DomainModel.SchemaModelItemHasSchemaModelItem)link).SchemaModelItemTarget)
+						{
+							firstViewPointState = "reads/writes";
+						}
+						else if (secondViewPoint == null)
+						{
+							secondViewPoint = (ISpySoft.SFSchemaLanguage.DomainModel.ViewPoint)((ISpySoft.SFSchemaLanguage.DomainModel.SchemaModelItemHasSchemaModelItem)link).SchemaModelItemTarget;
+							secondViewPointState = ((ISpySoft.SFSchemaLanguage.DomainModel.SchemaModelItemHasSchemaModelItem)link).GetProperties()["Description"].GetValue(((ISpySoft.SFSchemaLanguage.DomainModel.SchemaModelItemHasSchemaModelItem)link).GetProperties()["Description"]).ToString();							
+						}
+						else
+						{
+							secondViewPointState = "reads/writes";
+						}
+					}
+				}
+				if (firstViewPointState == "reads/writes" && secondViewPointState == "reads/writes")
+				{
+#>
+				<Mapping ID="<#= ((ISpySoft.SFSchemaLanguage.DomainModel.Mapping)item).Id.ToString()#>" name="<#= ((ISpySoft.SFSchemaLanguage.DomainModel.Mapping)item).Name.ToString()#>" source="<#= firstViewPoint.Id.ToString()#>" target="<#= secondViewPoint.Id.ToString()#>" bidirectional="true">
+					<Description><![CDATA[<#= ((ISpySoft.SFSchemaLanguage.DomainModel.Mapping)item).GetProperties()["Description"].GetValue(((ISpySoft.SFSchemaLanguage.DomainModel.Mapping)item).GetProperties()["Description"]).ToString()#>]]></Description>
+				</Mapping>
+<#
+				
+				}
+				else
+				{
+#>
+				<Mapping  ID="<#= ((ISpySoft.SFSchemaLanguage.DomainModel.Mapping)item).Id.ToString()#>" name="<#= ((ISpySoft.SFSchemaLanguage.DomainModel.Mapping)item).Name.ToString()#>" source="<#= firstViewPoint.Id.ToString()#>" target="<#= secondViewPoint.Id.ToString()#>" bidirectional="false">
+					<Description><![CDATA[<#= ((ISpySoft.SFSchemaLanguage.DomainModel.Mapping)item).GetProperties()["Description"].GetValue(((ISpySoft.SFSchemaLanguage.DomainModel.Mapping)item).GetProperties()["Description"]).ToString()#>]]></Description>
+				</Mapping>
+<#
+				}
+			}
+		}																
+#>
+		
+		
+	</Mappings>
+	
+</SFSchema>

@@ -1,0 +1,27 @@
+<#
+/***************************************************************************
+         Copyright (c) Microsoft CorporationAll rights reserved.             
+    This code sample is provided "AS IS" without warranty of any kind
+    it is not recommended for use in a production environment.
+***************************************************************************/
+#>
+<#@ definition processor="DDDirectiveProcessor" requires="fileName='..\\Designer.dsldd'" #>
+<#@ include file="Designer\Shell\GeneratedCmd.dslddi" #>
+namespace <#=this.Definition.Namespace#>
+{
+	class GuidList
+	{
+		private GuidList(){}
+
+		public const string guid<#=this.Definition.Name#>PkgString = "1042b62d-5fd9-474a-bab4-7af74289ee2a";
+		public static readonly Guid guid<#=this.Definition.Name#>Pkg = new Guid(guid<#=this.Definition.Name#>PkgString);
+		public const string guid<#=this.Definition.Name#>CmdSetString = "3ed3948f-e952-40e4-b0af-d7c05723c8b2";
+		public static readonly Guid guid<#=this.Definition.Name#>CmdSet = new Guid(guid<#=this.Definition.Name#>CmdSetString);
+		public const string guid<#=this.Definition.Name#>MenuString = "2c243497-9205-46ea-bb6d-d3c7adb437ba";
+		public static readonly Guid guid<#=this.Definition.Name#>Menu = new Guid(guid<#=this.Definition.Name#>MenuString);
+		public const string guidEditorFactoryString = "194f58e9-3c67-4a6e-b54d-ab3904f09570";
+		public static readonly Guid guidEditorFactory = new Guid(guidEditorFactoryString);
+		public const string guidModelExplorerToolWindowString = "6d42727a-dae1-43b1-894c-ef0860cd97eb";
+		public static readonly Guid guidModelExplorerToolWindow = new Guid(guidModelExplorerToolWindowString);
+	};
+}

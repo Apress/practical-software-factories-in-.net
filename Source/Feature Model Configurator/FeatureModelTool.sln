@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeatureModelConfigurator", "FeatureModelConfigurator\FeatureModelConfigurator.csproj", "{4980AFDE-C471-4C69-9B95-34DA5026A801}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeatureModelConfigurationLib", "FeatureModelConfigurationLib\FeatureModelConfigurationLib.csproj", "{55ACBAA8-429E-4A67-A45D-F9265476BDF7}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{63C6CDC2-5DC9-4DD8-8A86-8D2F16C03D4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4980AFDE-C471-4C69-9B95-34DA5026A801}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4980AFDE-C471-4C69-9B95-34DA5026A801}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4980AFDE-C471-4C69-9B95-34DA5026A801}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4980AFDE-C471-4C69-9B95-34DA5026A801}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55ACBAA8-429E-4A67-A45D-F9265476BDF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55ACBAA8-429E-4A67-A45D-F9265476BDF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55ACBAA8-429E-4A67-A45D-F9265476BDF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55ACBAA8-429E-4A67-A45D-F9265476BDF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63C6CDC2-5DC9-4DD8-8A86-8D2F16C03D4C}.Debug|Any CPU.ActiveCfg = Debug
+		{63C6CDC2-5DC9-4DD8-8A86-8D2F16C03D4C}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
